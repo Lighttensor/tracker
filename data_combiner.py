@@ -1,69 +1,122 @@
 # data_combiner.py
 import pandas as pd
+import numpy as np
 import aiohttp
-from datetime import datetime
+from datetime import datetime, timedelta
 
 class DataCombiner:
     def __init__(self, server_url="http://localhost:5000"):
         self.server_url = server_url
-        self.combined_data = pd.DataFrame()
-
+        self.raw_data = pd.DataFrame()
+        self.processed_data = pd.DataFrame()
+        
     def combine_data(self, upbit_data, binance_data):
-        """Combines data from both exchanges"""
-        if upbit_data:
-            upbit_df = pd.DataFrame(upbit_data)
-            upbit_df = upbit_df.rename(columns={
-                "opening_price": "opening_price_upbit",
-                "high_price": "high_price_upbit",
-                "low_price": "low_price_upbit",
-                "trade_price": "trade_price_upbit",
-                "candle_acc_trade_price": "candle_acc_trade_price_upbit",
-                "candle_acc_trade_volume": "candle_acc_trade_volume_upbit",
-                "source": "source_upbit"
-            })
-
-        if binance_data:
-            binance_df = pd.DataFrame(binance_data)
-            binance_df = binance_df.rename(columns={
-                "opening_price": "opening_price_binance",
-                "high_price": "high_price_binance",
-                "low_price": "low_price_binance",
-                "trade_price": "trade_price_binance",
-                "candle_acc_trade_price": "candle_acc_trade_price_binance",
-                "candle_acc_trade_volume": "candle_acc_trade_volume_binance",
-                "source": "source_binance"
-            })
-
-        # Merge data on market and timestamp
-        self.combined_data = pd.merge(
-            upbit_df, binance_df,
-            on=["market", "candle_date_time_utc_x"],
-            how="outer"
+        """Combines data from Upbit and Binance exchanges"""
+        # Convert to DataFrames
+        upbit_df = pd.DataFrame(upbit_data)
+        binance_df = pd.DataFrame(binance_data)
+        
+        # Basic data cleaning and preparation
+        for df in [upbit_df, binance_df]:
+            df['candle_date_time_utc'] = pd.to_datetime(df['candle_date_time_utc'])
+            
+        # Merge the dataframes
+        self.raw_data = pd.merge(
+            upbit_df,
+            binance_df,
+            on=['market', 'candle_date_time_utc'],
+            suffixes=('_upbit', '_binance')
         )
-
+        
+        # Process the combined data
+        self._process_data()
+        
+    def _process_data(self):
+        """Processes raw data into required format with premium calculations"""
+        df = self.raw_data.copy()
+        
+        # Basic columns
+        processed = pd.DataFrame()
+        processed['TimeFrame'] = '5min'
+        processed['DateTime'] = df['candle_date_time_utc']
+        processed['Coin'] = df['market']
+        processed['Price @ Upbit'] = df['trade_price_upbit']
+        processed['Price @ Binance'] = df['trade_price_binance']
+        
+        # Calculate Upbit Premium
+        processed['Premium diff'] = processed['Price @ Upbit'] - processed['Price @ Binance']
+        processed['Premium prct'] = (processed['Premium diff'] / processed['Price @ Binance']) * 100
+        
+        # Function to calculate rolling premium metrics
+        def calculate_premium_metrics(group, window):
+            metrics = pd.DataFrame()
+            metrics['diff'] = group['Premium diff'].rolling(window=window).mean()
+            metrics['prct'] = group['Premium prct'].rolling(window=window).mean()
+            metrics['current_diff'] = group['Premium diff'] - metrics['diff']
+            metrics['current_prct'] = group['Premium prct'] - metrics['prct']
+            return metrics
+        
+        # Calculate premium metrics for different time periods
+        for coin in processed['Coin'].unique():
+            mask = processed['Coin'] == coin
+            coin_data = processed[mask].sort_values('DateTime')
+            
+            # 1 Hour Premium (12 5-min candles)
+            hour_metrics = calculate_premium_metrics(coin_data, 12)
+            processed.loc[mask, 'Avg 1H Premium diff'] = hour_metrics['diff']
+            processed.loc[mask, 'Avg 1H Premium prct'] = hour_metrics['prct']
+            processed.loc[mask, 'Avg 1H Premium current diff'] = hour_metrics['current_diff']
+            processed.loc[mask, 'Avg 1H Premium current prct'] = hour_metrics['current_prct']
+            
+            # 24 Hour Premium
+            day_metrics = calculate_premium_metrics(coin_data, 288)
+            processed.loc[mask, 'Avg 24H Premium diff'] = day_metrics['diff']
+            processed.loc[mask, 'Avg 24H Premium prct'] = day_metrics['prct']
+            processed.loc[mask, 'Avg 24H Premium current diff'] = day_metrics['current_diff']
+            processed.loc[mask, 'Avg 24H Premium current prct'] = day_metrics['current_prct']
+            
+            # 1 Month Premium
+            month_metrics = calculate_premium_metrics(coin_data, 8640)
+            processed.loc[mask, 'Avg 1M Premium diff'] = month_metrics['diff']
+            processed.loc[mask, 'Avg 1M Premium prct'] = month_metrics['prct']
+            processed.loc[mask, 'Avg 1M Premium current diff'] = month_metrics['current_diff']
+            processed.loc[mask, 'Avg 1M Premium current prct'] = month_metrics['current_prct']
+        
+        # Add volume data
+        processed['Vol @ Upbit'] = df['candle_acc_trade_volume_upbit']
+        processed['Vol @ Binance'] = df['candle_acc_trade_volume_binance']
+        
+        self.processed_data = processed
+        
     def save_combined_data(self):
         """Saves combined data to CSV"""
-        if not self.combined_data.empty:
+        if not self.processed_data.empty:
             try:
-                # Try to read existing data
                 existing_data = pd.read_csv("combined_candles.csv")
-                combined = pd.concat([existing_data, self.combined_data])
-                # Remove duplicates
+                existing_data['DateTime'] = pd.to_datetime(existing_data['DateTime'])
+                
+                combined = pd.concat([existing_data, self.processed_data])
                 combined = combined.drop_duplicates(
-                    subset=['market', 'candle_date_time_utc_x'],
+                    subset=['Coin', 'DateTime'],
                     keep='last'
                 )
+                combined = combined.sort_values(['DateTime', 'Coin'])
+                
                 combined.to_csv("combined_candles.csv", index=False)
                 print(f"Saved combined data: {len(combined)} rows")
             except FileNotFoundError:
-                self.combined_data.to_csv("combined_candles.csv", index=False)
-                print(f"Created new file with {len(self.combined_data)} rows")
-
+                self.processed_data.to_csv("combined_candles.csv", index=False)
+                print(f"Created new file with {len(self.processed_data)} rows")
+                
     async def send_to_web_service(self):
-        """Sends combined data to web service"""
-        if not self.combined_data.empty:
+        """Sends processed data to web service"""
+        if not self.processed_data.empty:
             try:
-                data_dict = self.combined_data.to_dict('records')
+                data_to_send = self.processed_data.copy()
+                data_to_send['DateTime'] = data_to_send['DateTime'].dt.strftime('%Y-%m-%d %H:%M:%S')
+                
+                data_dict = data_to_send.to_dict('records')
+                
                 async with aiohttp.ClientSession() as session:
                     async with session.post(
                         f"{self.server_url}/update_data",
@@ -75,3 +128,7 @@ class DataCombiner:
                             print(f"Error sending data: {response.status}")
             except Exception as e:
                 print(f"Error sending data to web service: {e}")
+                
+    def get_processed_data(self):
+        """Returns the processed DataFrame"""
+        return self.processed_data
