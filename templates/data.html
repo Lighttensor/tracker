@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Market Data</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background-color: #2d2d2d;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #00ff88;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .last-update {
+            text-align: center;
+            color: #888;
+            font-size: 0.9em;
+        }
+
+        .data-grid {
+            background-color: #2d2d2d;
+            border-radius: 10px;
+            padding: 20px;
+            overflow-x: auto;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #404040;
+        }
+
+        th {
+            background-color: #333;
+            color: #00ff88;
+            font-weight: 500;
+            position: sticky;
+            top: 0;
+        }
+
+        tr:hover {
+            background-color: #363636;
+        }
+
+        .price-up {
+            color: #00ff88;
+        }
+
+        .price-down {
+            color: #ff4444;
+        }
+
+        .market-cell {
+            font-weight: 500;
+            color: #00bbff;
+        }
+
+        .timestamp-cell {
+            color: #888;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            th, td {
+                padding: 8px 10px;
+                font-size: 0.9em;
+            }
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .stat-card {
+            background-color: #2d2d2d;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-value {
+            font-size: 1.8em;
+            color: #00ff88;
+            margin: 10px 0;
+        }
+
+        .stat-label {
+            color: #888;
+            font-size: 0.9em;
+        }
+
+        .refresh-button {
+            background-color: #00ff88;
+            color: #1a1a1a;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background-color 0.3s;
+            margin-bottom: 20px;
+        }
+
+        .refresh-button:hover {
+            background-color: #00cc6a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Crypto Market Data</h1>
+            <p class="last-update">Last updated: <span id="lastUpdate"></span></p>
+        </div>
+
+        <button class="refresh-button" onclick="location.reload()">
+            Refresh Data
+        </button>
+
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-label">Total Markets</div>
+                <div class="stat-value">{{ data|length }}</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Average Upbit Price</div>
+                <div class="stat-value">${{ (data|sum(attribute='trade_price_upbit') / data|length)|round(2) }}</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Average Binance Price</div>
+                <div class="stat-value">${{ (data|sum(attribute='trade_price_binance') / data|length)|round(2) }}</div>
+            </div>
+        </div>
+
+        <div class="data-grid">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Market</th>
+                        <th>Time (UTC)</th>
+                        <th>Upbit Price</th>
+                        <th>Binance Price</th>
+                        <th>Upbit Volume</th>
+                        <th>Binance Volume</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in data %}
+                    <tr>
+                        <td class="market-cell">{{ row.market }}</td>
+                        <td class="timestamp-cell">{{ row.candle_date_time_utc_x }}</td>
+                        <td class="{{ 'price-up' if row.trade_price_upbit > row.opening_price_upbit else 'price-down' }}">
+                            ${{ row.trade_price_upbit|round(2) }}
+                        </td>
+                        <td class="{{ 'price-up' if row.trade_price_binance > row.opening_price_binance else 'price-down' }}">
+                            ${{ row.trade_price_binance|round(2) }}
+                        </td>
+                        <td>{{ row.candle_acc_trade_volume_upbit|round(2) }}</td>
+                        <td>{{ row.candle_acc_trade_volume_binance|round(2) }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // Update timestamp
+        function updateTimestamp() {
+            const now = new Date();
+            document.getElementById('lastUpdate').textContent = now.toLocaleString();
+        }
+        updateTimestamp();
+
+        // Auto refresh every 5 minutes
+        setInterval(() => {
+            location.reload();
+        }, 300000);
+    </script>
+</body>
+</html>
