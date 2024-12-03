@@ -1,0 +1,1760 @@
+2024-12-03 16:29:57,036 - DEBUG - Using selector: KqueueSelector
+2024-12-03 16:32:53,972 - DEBUG - Using selector: KqueueSelector
+2024-12-03 16:35:08,174 - DEBUG - Using selector: KqueueSelector
+2024-12-03 16:39:34,929 - DEBUG - Using selector: KqueueSelector
+2024-12-03 16:46:09,469 - DEBUG - Using selector: KqueueSelector
+2024-12-03 16:47:06,221 - DEBUG - Using selector: KqueueSelector
+2024-12-03 16:48:24,683 - DEBUG - Using selector: KqueueSelector
+2024-12-03 16:53:50,642 - DEBUG - Using selector: KqueueSelector
+2024-12-03 16:54:15,044 - DEBUG - Using selector: KqueueSelector
+2024-12-03 16:58:07,308 - DEBUG - Using selector: KqueueSelector
+2024-12-03 17:02:57,806 - DEBUG - Using selector: KqueueSelector
+2024-12-03 17:06:30,837 - INFO - Loading data from /Users/user/Desktop/upbit vs binance/upbit_data.csv
+2024-12-03 17:06:30,907 - INFO - Loaded Upbit data: 58800 rows
+2024-12-03 17:06:30,907 - INFO - Loading data from /Users/user/Desktop/upbit vs binance/binance_historical_data.csv
+2024-12-03 17:06:30,940 - INFO - Loaded Binance data: 60480 rows
+2024-12-03 17:06:30,940 - INFO - 
+Validating upbit data:
+2024-12-03 17:06:30,940 - INFO - Input DataFrame shape: (58800, 10)
+2024-12-03 17:06:30,940 - INFO - Available columns: ['market', 'source', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'trade_price', 'candle_acc_trade_volume', 'candle_acc_trade_price', 'timestamp']
+2024-12-03 17:06:30,940 - INFO - Required columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'trade_price', 'candle_acc_trade_volume']
+2024-12-03 17:06:30,940 - INFO - Normalized columns: ['market', 'source', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'trade_price', 'candle_acc_trade_volume', 'candle_acc_trade_price', 'timestamp']
+2024-12-03 17:06:30,960 - INFO - 
+Validating binance data:
+2024-12-03 17:06:30,960 - INFO - Input DataFrame shape: (60480, 9)
+2024-12-03 17:06:30,960 - INFO - Available columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'close_price', 'volume', 'quote_volume', 'market_type']
+2024-12-03 17:06:30,960 - INFO - Required columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'close_price', 'volume']
+2024-12-03 17:06:30,960 - INFO - Normalized columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'close_price', 'volume', 'quote_volume', 'market_type']
+2024-12-03 17:06:30,998 - INFO - Processing market 1INCH/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:31,154 - INFO - Processing market AAVE/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:31,301 - INFO - Processing market ADA/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:31,448 - INFO - Processing market AERGO/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:31,629 - INFO - Processing market AGLD/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:31,775 - INFO - Processing market AKT/USDT: 400 Upbit records, 288 Binance records
+2024-12-03 17:06:31,922 - INFO - Processing market ALGO/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:32,065 - INFO - Processing market ANKR/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:32,273 - INFO - Processing market APT/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:32,418 - INFO - Processing market ARB/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:32,564 - INFO - Processing market ARDR/USDT: 400 Upbit records, 288 Binance records
+2024-12-03 17:06:32,708 - INFO - Processing market ARK/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:32,855 - INFO - Processing market ASTR/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:32,998 - INFO - Processing market ATOM/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:33,142 - INFO - Processing market AUCTION/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:33,285 - INFO - Processing market AVAX/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:33,430 - INFO - Processing market AXS/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:33,609 - INFO - Processing market BAT/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:33,753 - INFO - Processing market BCH/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:33,956 - INFO - Processing market BIGTIME/USDT: 400 Upbit records, 288 Binance records
+2024-12-03 17:06:34,102 - INFO - Processing market BLUR/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:34,245 - INFO - Processing market BONK/USDT: 400 Upbit records, 288 Binance records
+2024-12-03 17:06:34,392 - INFO - Processing market BSV/USDT: 400 Upbit records, 288 Binance records
+2024-12-03 17:06:34,535 - INFO - Processing market BTC/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:34,681 - INFO - Processing market CELO/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:34,827 - INFO - Processing market CHZ/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:34,972 - INFO - Processing market CKB/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:35,117 - INFO - Processing market CVC/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:35,261 - INFO - Processing market DOGE/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:35,440 - INFO - Processing market DOT/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:35,591 - INFO - Processing market DRIFT/USDT: 400 Upbit records, 288 Binance records
+2024-12-03 17:06:35,792 - INFO - Processing market EGLD/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:35,937 - INFO - Processing market ELF/USDT: 400 Upbit records, 288 Binance records
+2024-12-03 17:06:36,080 - INFO - Processing market ENS/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:36,224 - INFO - Processing market EOS/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:36,371 - INFO - Processing market ETC/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:36,516 - INFO - Processing market ETH/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:36,662 - INFO - Processing market FLOW/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:36,806 - INFO - Processing market G/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:36,952 - INFO - Processing market GAS/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:37,099 - INFO - Processing market GLM/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:37,246 - INFO - Processing market GMT/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:37,392 - INFO - Processing market GRT/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:37,535 - INFO - Processing market HBAR/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:37,799 - INFO - Processing market HIFI/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:37,944 - INFO - Processing market HIVE/USDT: 400 Upbit records, 288 Binance records
+2024-12-03 17:06:38,087 - INFO - Processing market ICX/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:38,230 - INFO - Processing market ID/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:38,377 - INFO - Processing market IMX/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:38,550 - INFO - Processing market INJ/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:38,697 - INFO - Processing market IOST/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:38,841 - INFO - Processing market IOTA/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:38,985 - INFO - Processing market IQ/USDT: 400 Upbit records, 288 Binance records
+2024-12-03 17:06:39,130 - INFO - Processing market JST/USDT: 400 Upbit records, 288 Binance records
+2024-12-03 17:06:39,292 - INFO - Processing market JUP/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:39,451 - INFO - Processing market KAVA/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:39,595 - INFO - Processing market KNC/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:39,825 - INFO - Processing market LINK/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:39,971 - INFO - Processing market LOOM/USDT: 400 Upbit records, 288 Binance records
+2024-12-03 17:06:40,118 - INFO - Processing market LSK/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:40,263 - INFO - Processing market MANA/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:40,408 - INFO - Processing market MASK/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:40,553 - INFO - Processing market MBL/USDT: 400 Upbit records, 288 Binance records
+2024-12-03 17:06:40,732 - INFO - Processing market MEW/USDT: 400 Upbit records, 288 Binance records
+2024-12-03 17:06:40,879 - INFO - Processing market MINA/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:41,024 - INFO - Processing market MTL/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:41,169 - INFO - Processing market NEAR/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:41,314 - INFO - Processing market NEO/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:41,460 - INFO - Processing market ONDO/USDT: 400 Upbit records, 288 Binance records
+2024-12-03 17:06:41,666 - INFO - Processing market ONG/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:41,810 - INFO - Processing market ONT/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:41,954 - INFO - Processing market ORBS/USDT: 400 Upbit records, 288 Binance records
+2024-12-03 17:06:42,101 - INFO - Processing market PENDLE/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:42,248 - INFO - Processing market PEPE/USDT: 400 Upbit records, 288 Binance records
+2024-12-03 17:06:42,397 - INFO - Processing market POL/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:42,542 - INFO - Processing market POLYX/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:42,690 - INFO - Processing market POWR/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:42,869 - INFO - Processing market PUNDIX/USDT: 400 Upbit records, 288 Binance records
+2024-12-03 17:06:43,015 - INFO - Processing market PYTH/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:43,165 - INFO - Processing market QKC/USDT: 400 Upbit records, 288 Binance records
+2024-12-03 17:06:43,312 - INFO - Processing market QTUM/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:43,513 - INFO - Processing market SAFE/USDT: 400 Upbit records, 288 Binance records
+2024-12-03 17:06:43,660 - INFO - Processing market SAND/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:43,805 - INFO - Processing market SC/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:43,951 - INFO - Processing market SEI/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:44,097 - INFO - Processing market SHIB/USDT: 400 Upbit records, 288 Binance records
+2024-12-03 17:06:44,242 - INFO - Processing market SNT/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:44,387 - INFO - Processing market SOL/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:44,531 - INFO - Processing market STEEM/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:44,678 - INFO - Processing market STG/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:44,823 - INFO - Processing market STMX/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:44,968 - INFO - Processing market STORJ/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:45,151 - INFO - Processing market STPT/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:45,355 - INFO - Processing market STRAX/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:45,499 - INFO - Processing market STX/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:45,645 - INFO - Processing market SUI/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:45,789 - INFO - Processing market SXP/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:45,936 - INFO - Processing market T/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:46,082 - INFO - Processing market TFUEL/USDT: 400 Upbit records, 288 Binance records
+2024-12-03 17:06:46,226 - INFO - Processing market THETA/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:46,373 - INFO - Processing market TON/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:46,518 - INFO - Processing market TRX/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:46,665 - INFO - Processing market UNI/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:46,809 - INFO - Processing market USDC/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:46,954 - INFO - Processing market UXLINK/USDT: 400 Upbit records, 288 Binance records
+2024-12-03 17:06:47,099 - INFO - Processing market VET/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:47,305 - INFO - Processing market W/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:47,487 - INFO - Processing market WAVES/USDT: 400 Upbit records, 288 Binance records
+2024-12-03 17:06:47,634 - INFO - Processing market WAXP/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:47,778 - INFO - Processing market XEC/USDT: 400 Upbit records, 288 Binance records
+2024-12-03 17:06:47,925 - INFO - Processing market XEM/USDT: 400 Upbit records, 288 Binance records
+2024-12-03 17:06:48,070 - INFO - Processing market XLM/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:48,215 - INFO - Processing market XRP/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:48,361 - INFO - Processing market XTZ/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:48,506 - INFO - Processing market ZETA/USDT: 400 Upbit records, 288 Binance records
+2024-12-03 17:06:48,655 - INFO - Processing market ZIL/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:48,799 - INFO - Processing market ZRO/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:48,945 - INFO - Processing market ZRX/USDT: 400 Upbit records, 576 Binance records
+2024-12-03 17:06:49,221 - INFO - Successfully combined data with 22700 matched pairs
+2024-12-03 17:06:49,457 - INFO - Successfully saved 22700 rows to combined_market_data.csv
+2024-12-03 17:06:49,457 - INFO - Preparing data for web service...
+2024-12-03 17:06:50,211 - INFO - Sending 22700 records to web service...
+2024-12-03 17:06:50,327 - ERROR - Error sending data to web service: Cannot connect to host localhost:5000 ssl:default [Multiple exceptions: [Errno 61] Connect call failed ('127.0.0.1', 5000), [Errno 61] Connect call failed ('::1', 5000, 0, 0)]
+Traceback (most recent call last):
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/aiohttp/connector.py", line 1109, in _wrap_create_connection
+    sock = await aiohappyeyeballs.start_connection(
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/aiohappyeyeballs/impl.py", line 123, in start_connection
+    raise OSError(first_errno, msg)
+ConnectionRefusedError: [Errno 61] Multiple exceptions: [Errno 61] Connect call failed ('127.0.0.1', 5000), [Errno 61] Connect call failed ('::1', 5000, 0, 0)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/user/Desktop/upbit vs binance/data_combiner.py", line 90, in send_to_web_service
+    async with session.post(
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/aiohttp/client.py", line 1423, in __aenter__
+    self._resp: _RetType = await self._coro
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/aiohttp/client.py", line 701, in _request
+    conn = await self._connector.connect(
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/aiohttp/connector.py", line 544, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/aiohttp/connector.py", line 1050, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/aiohttp/connector.py", line 1394, in _create_direct_connection
+    raise last_exc
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/aiohttp/connector.py", line 1363, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/aiohttp/connector.py", line 1124, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host localhost:5000 ssl:default [Multiple exceptions: [Errno 61] Connect call failed ('127.0.0.1', 5000), [Errno 61] Connect call failed ('::1', 5000, 0, 0)]
+2024-12-03 17:11:29,394 - DEBUG - Using selector: KqueueSelector
+2024-12-03 17:14:56,370 - INFO - Loading data from /Users/user/Desktop/upbit vs binance/upbit_data.csv
+2024-12-03 17:14:56,430 - INFO - Loaded Upbit data: 59030 rows
+2024-12-03 17:14:56,430 - INFO - Loading data from /Users/user/Desktop/upbit vs binance/binance_historical_data.csv
+2024-12-03 17:14:56,462 - INFO - Loaded Binance data: 60900 rows
+2024-12-03 17:14:56,462 - INFO - 
+Validating upbit data:
+2024-12-03 17:14:56,462 - INFO - Input DataFrame shape: (59030, 10)
+2024-12-03 17:14:56,462 - INFO - Available columns: ['market', 'source', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'trade_price', 'candle_acc_trade_volume', 'candle_acc_trade_price', 'timestamp']
+2024-12-03 17:14:56,462 - INFO - Required columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'trade_price', 'candle_acc_trade_volume']
+2024-12-03 17:14:56,462 - INFO - Normalized columns: ['market', 'source', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'trade_price', 'candle_acc_trade_volume', 'candle_acc_trade_price', 'timestamp']
+2024-12-03 17:14:56,482 - INFO - 
+Validating binance data:
+2024-12-03 17:14:56,483 - INFO - Input DataFrame shape: (60900, 9)
+2024-12-03 17:14:56,483 - INFO - Available columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'close_price', 'volume', 'quote_volume', 'market_type']
+2024-12-03 17:14:56,483 - INFO - Required columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'close_price', 'volume']
+2024-12-03 17:14:56,483 - INFO - Normalized columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'close_price', 'volume', 'quote_volume', 'market_type']
+2024-12-03 17:14:56,521 - INFO - Processing market 1INCH/USDT: 401 Upbit records, 580 Binance records
+2024-12-03 17:14:56,707 - INFO - Processing market AAVE/USDT: 401 Upbit records, 580 Binance records
+2024-12-03 17:14:56,860 - INFO - Processing market ADA/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:14:57,007 - INFO - Processing market AERGO/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:14:57,210 - INFO - Processing market AGLD/USDT: 401 Upbit records, 580 Binance records
+2024-12-03 17:14:57,363 - INFO - Processing market AKT/USDT: 401 Upbit records, 290 Binance records
+2024-12-03 17:14:57,509 - INFO - Processing market ALGO/USDT: 401 Upbit records, 580 Binance records
+2024-12-03 17:14:57,653 - INFO - Processing market ANKR/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:14:57,798 - INFO - Processing market APT/USDT: 401 Upbit records, 580 Binance records
+2024-12-03 17:14:57,942 - INFO - Processing market ARB/USDT: 401 Upbit records, 580 Binance records
+2024-12-03 17:14:58,089 - INFO - Processing market ARDR/USDT: 402 Upbit records, 290 Binance records
+2024-12-03 17:14:58,232 - INFO - Processing market ARK/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:14:58,377 - INFO - Processing market ASTR/USDT: 401 Upbit records, 580 Binance records
+2024-12-03 17:14:58,526 - INFO - Processing market ATOM/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:14:58,671 - INFO - Processing market AUCTION/USDT: 401 Upbit records, 580 Binance records
+2024-12-03 17:14:58,875 - INFO - Processing market AVAX/USDT: 401 Upbit records, 580 Binance records
+2024-12-03 17:14:59,018 - INFO - Processing market AXS/USDT: 401 Upbit records, 580 Binance records
+2024-12-03 17:14:59,161 - INFO - Processing market BAT/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:14:59,305 - INFO - Processing market BCH/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:14:59,477 - INFO - Processing market BIGTIME/USDT: 401 Upbit records, 290 Binance records
+2024-12-03 17:14:59,631 - INFO - Processing market BLUR/USDT: 401 Upbit records, 580 Binance records
+2024-12-03 17:14:59,787 - INFO - Processing market BONK/USDT: 401 Upbit records, 290 Binance records
+2024-12-03 17:14:59,932 - INFO - Processing market BSV/USDT: 402 Upbit records, 290 Binance records
+2024-12-03 17:15:00,077 - INFO - Processing market BTC/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:00,221 - INFO - Processing market CELO/USDT: 401 Upbit records, 580 Binance records
+2024-12-03 17:15:00,368 - INFO - Processing market CHZ/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:00,512 - INFO - Processing market CKB/USDT: 401 Upbit records, 580 Binance records
+2024-12-03 17:15:00,721 - INFO - Processing market CVC/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:00,912 - INFO - Processing market DOGE/USDT: 401 Upbit records, 580 Binance records
+2024-12-03 17:15:01,056 - INFO - Processing market DOT/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:01,203 - INFO - Processing market DRIFT/USDT: 401 Upbit records, 290 Binance records
+2024-12-03 17:15:01,348 - INFO - Processing market EGLD/USDT: 401 Upbit records, 580 Binance records
+2024-12-03 17:15:01,492 - INFO - Processing market ELF/USDT: 402 Upbit records, 290 Binance records
+2024-12-03 17:15:01,637 - INFO - Processing market ENS/USDT: 401 Upbit records, 580 Binance records
+2024-12-03 17:15:01,847 - INFO - Processing market EOS/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:01,999 - INFO - Processing market ETC/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:02,178 - INFO - Processing market ETH/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:02,326 - INFO - Processing market FLOW/USDT: 401 Upbit records, 580 Binance records
+2024-12-03 17:15:02,471 - INFO - Processing market G/USDT: 401 Upbit records, 580 Binance records
+2024-12-03 17:15:02,616 - INFO - Processing market GAS/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:02,761 - INFO - Processing market GLM/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:02,907 - INFO - Processing market GMT/USDT: 401 Upbit records, 580 Binance records
+2024-12-03 17:15:03,062 - INFO - Processing market GRT/USDT: 401 Upbit records, 580 Binance records
+2024-12-03 17:15:03,209 - INFO - Processing market HBAR/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:03,355 - INFO - Processing market HIFI/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:03,500 - INFO - Processing market HIVE/USDT: 402 Upbit records, 290 Binance records
+2024-12-03 17:15:03,705 - INFO - Processing market ICX/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:03,850 - INFO - Processing market ID/USDT: 401 Upbit records, 580 Binance records
+2024-12-03 17:15:03,994 - INFO - Processing market IMX/USDT: 401 Upbit records, 580 Binance records
+2024-12-03 17:15:04,145 - INFO - Processing market INJ/USDT: 401 Upbit records, 580 Binance records
+2024-12-03 17:15:04,323 - INFO - Processing market IOST/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:04,469 - INFO - Processing market IOTA/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:04,614 - INFO - Processing market IQ/USDT: 402 Upbit records, 290 Binance records
+2024-12-03 17:15:04,759 - INFO - Processing market JST/USDT: 402 Upbit records, 290 Binance records
+2024-12-03 17:15:04,941 - INFO - Processing market JUP/USDT: 401 Upbit records, 580 Binance records
+2024-12-03 17:15:05,086 - INFO - Processing market KAVA/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:05,230 - INFO - Processing market KNC/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:05,441 - INFO - Processing market LINK/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:05,586 - INFO - Processing market LOOM/USDT: 402 Upbit records, 290 Binance records
+2024-12-03 17:15:05,730 - INFO - Processing market LSK/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:05,877 - INFO - Processing market MANA/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:06,022 - INFO - Processing market MASK/USDT: 401 Upbit records, 580 Binance records
+2024-12-03 17:15:06,169 - INFO - Processing market MBL/USDT: 402 Upbit records, 290 Binance records
+2024-12-03 17:15:06,313 - INFO - Processing market MEW/USDT: 401 Upbit records, 290 Binance records
+2024-12-03 17:15:06,496 - INFO - Processing market MINA/USDT: 401 Upbit records, 580 Binance records
+2024-12-03 17:15:06,644 - INFO - Processing market MTL/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:06,790 - INFO - Processing market NEAR/USDT: 401 Upbit records, 580 Binance records
+2024-12-03 17:15:06,935 - INFO - Processing market NEO/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:07,081 - INFO - Processing market ONDO/USDT: 401 Upbit records, 290 Binance records
+2024-12-03 17:15:07,226 - INFO - Processing market ONG/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:07,431 - INFO - Processing market ONT/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:07,585 - INFO - Processing market ORBS/USDT: 402 Upbit records, 290 Binance records
+2024-12-03 17:15:07,730 - INFO - Processing market PENDLE/USDT: 401 Upbit records, 580 Binance records
+2024-12-03 17:15:07,876 - INFO - Processing market PEPE/USDT: 401 Upbit records, 290 Binance records
+2024-12-03 17:15:08,024 - INFO - Processing market POL/USDT: 401 Upbit records, 580 Binance records
+2024-12-03 17:15:08,201 - INFO - Processing market POLYX/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:08,348 - INFO - Processing market POWR/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:08,494 - INFO - Processing market PUNDIX/USDT: 401 Upbit records, 290 Binance records
+2024-12-03 17:15:08,642 - INFO - Processing market PYTH/USDT: 401 Upbit records, 580 Binance records
+2024-12-03 17:15:08,792 - INFO - Processing market QKC/USDT: 402 Upbit records, 290 Binance records
+2024-12-03 17:15:08,938 - INFO - Processing market QTUM/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:09,141 - INFO - Processing market SAFE/USDT: 401 Upbit records, 290 Binance records
+2024-12-03 17:15:09,285 - INFO - Processing market SAND/USDT: 401 Upbit records, 580 Binance records
+2024-12-03 17:15:09,431 - INFO - Processing market SC/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:09,606 - INFO - Processing market SEI/USDT: 401 Upbit records, 580 Binance records
+2024-12-03 17:15:09,753 - INFO - Processing market SHIB/USDT: 401 Upbit records, 290 Binance records
+2024-12-03 17:15:09,909 - INFO - Processing market SNT/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:10,053 - INFO - Processing market SOL/USDT: 401 Upbit records, 580 Binance records
+2024-12-03 17:15:10,200 - INFO - Processing market STEEM/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:10,348 - INFO - Processing market STG/USDT: 401 Upbit records, 580 Binance records
+2024-12-03 17:15:10,492 - INFO - Processing market STMX/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:10,639 - INFO - Processing market STORJ/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:10,784 - INFO - Processing market STPT/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:11,026 - INFO - Processing market STRAX/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:11,173 - INFO - Processing market STX/USDT: 401 Upbit records, 580 Binance records
+2024-12-03 17:15:11,319 - INFO - Processing market SUI/USDT: 401 Upbit records, 580 Binance records
+2024-12-03 17:15:11,464 - INFO - Processing market SXP/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:11,610 - INFO - Processing market T/USDT: 401 Upbit records, 580 Binance records
+2024-12-03 17:15:11,756 - INFO - Processing market TFUEL/USDT: 402 Upbit records, 290 Binance records
+2024-12-03 17:15:11,903 - INFO - Processing market THETA/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:12,047 - INFO - Processing market TON/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:12,198 - INFO - Processing market TRX/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:12,345 - INFO - Processing market UNI/USDT: 401 Upbit records, 580 Binance records
+2024-12-03 17:15:12,489 - INFO - Processing market USDC/USDT: 401 Upbit records, 580 Binance records
+2024-12-03 17:15:12,668 - INFO - Processing market UXLINK/USDT: 401 Upbit records, 290 Binance records
+2024-12-03 17:15:12,878 - INFO - Processing market VET/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:13,026 - INFO - Processing market W/USDT: 401 Upbit records, 580 Binance records
+2024-12-03 17:15:13,174 - INFO - Processing market WAVES/USDT: 402 Upbit records, 290 Binance records
+2024-12-03 17:15:13,326 - INFO - Processing market WAXP/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:13,473 - INFO - Processing market XEC/USDT: 401 Upbit records, 290 Binance records
+2024-12-03 17:15:13,620 - INFO - Processing market XEM/USDT: 402 Upbit records, 290 Binance records
+2024-12-03 17:15:13,766 - INFO - Processing market XLM/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:13,946 - INFO - Processing market XRP/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:14,091 - INFO - Processing market XTZ/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:14,237 - INFO - Processing market ZETA/USDT: 401 Upbit records, 290 Binance records
+2024-12-03 17:15:14,389 - INFO - Processing market ZIL/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:14,536 - INFO - Processing market ZRO/USDT: 401 Upbit records, 580 Binance records
+2024-12-03 17:15:14,740 - INFO - Processing market ZRX/USDT: 402 Upbit records, 580 Binance records
+2024-12-03 17:15:14,932 - INFO - Successfully combined data with 22882 matched pairs
+2024-12-03 17:15:15,141 - INFO - Successfully saved 22882 rows to combined_market_data.csv
+2024-12-03 17:15:15,141 - INFO - Preparing data for web service...
+2024-12-03 17:15:15,892 - INFO - Sending 22882 records to web service...
+2024-12-03 17:15:16,104 - ERROR - Error sending data: 500, Response: {
+  "message": "'DateTime'",
+  "status": "error"
+}
+
+2024-12-03 18:46:47,328 - DEBUG - Using selector: KqueueSelector
+2024-12-03 18:51:28,252 - INFO - Loading data from /Users/user/Desktop/upbit vs binance/upbit_data.csv
+2024-12-03 18:51:28,308 - INFO - Loaded Upbit data: 61871 rows
+2024-12-03 18:51:28,308 - INFO - Loading data from /Users/user/Desktop/upbit vs binance/binance_historical_data.csv
+2024-12-03 18:51:28,343 - INFO - Loaded Binance data: 64890 rows
+2024-12-03 18:51:28,343 - INFO - 
+Validating upbit data:
+2024-12-03 18:51:28,344 - INFO - Input DataFrame shape: (61871, 10)
+2024-12-03 18:51:28,344 - INFO - Available columns: ['market', 'source', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'trade_price', 'candle_acc_trade_volume', 'candle_acc_trade_price', 'timestamp']
+2024-12-03 18:51:28,344 - INFO - Required columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'trade_price', 'candle_acc_trade_volume']
+2024-12-03 18:51:28,344 - INFO - Normalized columns: ['market', 'source', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'trade_price', 'candle_acc_trade_volume', 'candle_acc_trade_price', 'timestamp']
+2024-12-03 18:51:28,365 - INFO - 
+Validating binance data:
+2024-12-03 18:51:28,366 - INFO - Input DataFrame shape: (64890, 9)
+2024-12-03 18:51:28,366 - INFO - Available columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'close_price', 'volume', 'quote_volume', 'market_type']
+2024-12-03 18:51:28,366 - INFO - Required columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'close_price', 'volume']
+2024-12-03 18:51:28,366 - INFO - Normalized columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'close_price', 'volume', 'quote_volume', 'market_type']
+2024-12-03 18:51:28,406 - INFO - Processing market 1INCH/USDT: 420 Upbit records, 618 Binance records
+2024-12-03 18:51:28,600 - INFO - Processing market AAVE/USDT: 420 Upbit records, 618 Binance records
+2024-12-03 18:51:28,763 - INFO - Processing market ADA/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:28,979 - INFO - Processing market AERGO/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:29,136 - INFO - Processing market AGLD/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:29,303 - INFO - Processing market AKT/USDT: 421 Upbit records, 309 Binance records
+2024-12-03 18:51:29,458 - INFO - Processing market ALGO/USDT: 420 Upbit records, 618 Binance records
+2024-12-03 18:51:29,613 - INFO - Processing market ANKR/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:29,768 - INFO - Processing market APT/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:29,924 - INFO - Processing market ARB/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:30,082 - INFO - Processing market ARDR/USDT: 421 Upbit records, 309 Binance records
+2024-12-03 18:51:30,236 - INFO - Processing market ARK/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:30,395 - INFO - Processing market ASTR/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:30,618 - INFO - Processing market ATOM/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:30,772 - INFO - Processing market AUCTION/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:30,926 - INFO - Processing market AVAX/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:31,080 - INFO - Processing market AXS/USDT: 420 Upbit records, 618 Binance records
+2024-12-03 18:51:31,281 - INFO - Processing market BAT/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:31,437 - INFO - Processing market BCH/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:31,604 - INFO - Processing market BIGTIME/USDT: 421 Upbit records, 309 Binance records
+2024-12-03 18:51:31,759 - INFO - Processing market BLUR/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:31,915 - INFO - Processing market BONK/USDT: 421 Upbit records, 309 Binance records
+2024-12-03 18:51:32,072 - INFO - Processing market BSV/USDT: 421 Upbit records, 309 Binance records
+2024-12-03 18:51:32,230 - INFO - Processing market BTC/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:32,386 - INFO - Processing market CELO/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:32,603 - INFO - Processing market CHZ/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:32,767 - INFO - Processing market CKB/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:32,922 - INFO - Processing market CVC/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:33,112 - INFO - Processing market DOGE/USDT: 420 Upbit records, 618 Binance records
+2024-12-03 18:51:33,268 - INFO - Processing market DOT/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:33,423 - INFO - Processing market DRIFT/USDT: 421 Upbit records, 309 Binance records
+2024-12-03 18:51:33,585 - INFO - Processing market EGLD/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:33,743 - INFO - Processing market ELF/USDT: 421 Upbit records, 309 Binance records
+2024-12-03 18:51:33,902 - INFO - Processing market ENS/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:34,119 - INFO - Processing market EOS/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:34,276 - INFO - Processing market ETC/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:34,432 - INFO - Processing market ETH/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:34,618 - INFO - Processing market FLOW/USDT: 420 Upbit records, 618 Binance records
+2024-12-03 18:51:34,778 - INFO - Processing market G/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:34,940 - INFO - Processing market GAS/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:35,096 - INFO - Processing market GLM/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:35,254 - INFO - Processing market GMT/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:35,410 - INFO - Processing market GRT/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:35,569 - INFO - Processing market HBAR/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:35,724 - INFO - Processing market HIFI/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:35,934 - INFO - Processing market HIVE/USDT: 421 Upbit records, 309 Binance records
+2024-12-03 18:51:36,097 - INFO - Processing market ICX/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:36,253 - INFO - Processing market ID/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:36,442 - INFO - Processing market IMX/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:36,638 - INFO - Processing market INJ/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:36,795 - INFO - Processing market IOST/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:36,950 - INFO - Processing market IOTA/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:37,111 - INFO - Processing market IQ/USDT: 421 Upbit records, 309 Binance records
+2024-12-03 18:51:37,270 - INFO - Processing market JST/USDT: 421 Upbit records, 309 Binance records
+2024-12-03 18:51:37,426 - INFO - Processing market JUP/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:37,584 - INFO - Processing market KAVA/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:37,740 - INFO - Processing market KNC/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:37,953 - INFO - Processing market LINK/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:38,112 - INFO - Processing market LOOM/USDT: 421 Upbit records, 309 Binance records
+2024-12-03 18:51:38,271 - INFO - Processing market LSK/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:38,430 - INFO - Processing market MANA/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:38,622 - INFO - Processing market MASK/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:38,778 - INFO - Processing market MBL/USDT: 421 Upbit records, 309 Binance records
+2024-12-03 18:51:38,934 - INFO - Processing market MEW/USDT: 421 Upbit records, 309 Binance records
+2024-12-03 18:51:39,090 - INFO - Processing market MINA/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:39,247 - INFO - Processing market MTL/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:39,410 - INFO - Processing market NEAR/USDT: 420 Upbit records, 618 Binance records
+2024-12-03 18:51:39,589 - INFO - Processing market NEO/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:39,782 - INFO - Processing market ONDO/USDT: 421 Upbit records, 309 Binance records
+2024-12-03 18:51:39,938 - INFO - Processing market ONG/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:40,096 - INFO - Processing market ONT/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:40,289 - INFO - Processing market ORBS/USDT: 421 Upbit records, 309 Binance records
+2024-12-03 18:51:40,446 - INFO - Processing market PENDLE/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:40,615 - INFO - Processing market PEPE/USDT: 421 Upbit records, 309 Binance records
+2024-12-03 18:51:40,770 - INFO - Processing market POL/USDT: 420 Upbit records, 618 Binance records
+2024-12-03 18:51:40,925 - INFO - Processing market POLYX/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:41,082 - INFO - Processing market POWR/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:41,238 - INFO - Processing market PUNDIX/USDT: 420 Upbit records, 309 Binance records
+2024-12-03 18:51:41,451 - INFO - Processing market PYTH/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:41,611 - INFO - Processing market QKC/USDT: 421 Upbit records, 309 Binance records
+2024-12-03 18:51:41,776 - INFO - Processing market QTUM/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:41,941 - INFO - Processing market SAFE/USDT: 421 Upbit records, 309 Binance records
+2024-12-03 18:51:42,105 - INFO - Processing market SAND/USDT: 420 Upbit records, 618 Binance records
+2024-12-03 18:51:42,270 - INFO - Processing market SC/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:42,430 - INFO - Processing market SEI/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:42,585 - INFO - Processing market SHIB/USDT: 421 Upbit records, 309 Binance records
+2024-12-03 18:51:42,746 - INFO - Processing market SNT/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:42,904 - INFO - Processing market SOL/USDT: 420 Upbit records, 618 Binance records
+2024-12-03 18:51:43,060 - INFO - Processing market STEEM/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:43,274 - INFO - Processing market STG/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:43,429 - INFO - Processing market STMX/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:43,586 - INFO - Processing market STORJ/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:43,742 - INFO - Processing market STPT/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:43,904 - INFO - Processing market STRAX/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:44,061 - INFO - Processing market STX/USDT: 420 Upbit records, 618 Binance records
+2024-12-03 18:51:44,217 - INFO - Processing market SUI/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:44,372 - INFO - Processing market SXP/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:44,532 - INFO - Processing market T/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:44,766 - INFO - Processing market TFUEL/USDT: 421 Upbit records, 309 Binance records
+2024-12-03 18:51:44,928 - INFO - Processing market THETA/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:45,089 - INFO - Processing market TON/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:45,246 - INFO - Processing market TRX/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:45,402 - INFO - Processing market UNI/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:45,565 - INFO - Processing market USDC/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:45,755 - INFO - Processing market UXLINK/USDT: 421 Upbit records, 309 Binance records
+2024-12-03 18:51:45,912 - INFO - Processing market VET/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:46,071 - INFO - Processing market W/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:46,232 - INFO - Processing market WAVES/USDT: 421 Upbit records, 309 Binance records
+2024-12-03 18:51:46,387 - INFO - Processing market WAXP/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:46,548 - INFO - Processing market XEC/USDT: 420 Upbit records, 309 Binance records
+2024-12-03 18:51:46,761 - INFO - Processing market XEM/USDT: 421 Upbit records, 309 Binance records
+2024-12-03 18:51:46,916 - INFO - Processing market XLM/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:47,072 - INFO - Processing market XRP/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:47,234 - INFO - Processing market XTZ/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:47,391 - INFO - Processing market ZETA/USDT: 421 Upbit records, 309 Binance records
+2024-12-03 18:51:47,551 - INFO - Processing market ZIL/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:47,707 - INFO - Processing market ZRO/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:47,864 - INFO - Processing market ZRX/USDT: 421 Upbit records, 618 Binance records
+2024-12-03 18:51:48,074 - INFO - Successfully combined data with 25165 matched pairs
+2024-12-03 18:51:48,371 - INFO - Successfully saved 25165 rows to combined_market_data.csv
+2024-12-03 18:51:48,371 - INFO - Preparing data for web service...
+2024-12-03 18:51:49,308 - INFO - Sending 25165 records to web service...
+2024-12-03 18:51:49,544 - ERROR - Error sending data: 500, Response: {
+  "message": "'timestamp_upbit'",
+  "status": "error"
+}
+
+2024-12-03 19:20:23,026 - DEBUG - Using selector: KqueueSelector
+2024-12-03 19:24:10,885 - INFO - Loading data from /Users/user/Desktop/upbit vs binance/upbit_data.csv
+2024-12-03 19:24:10,940 - INFO - Loaded Upbit data: 62852 rows
+2024-12-03 19:24:10,940 - INFO - Loading data from /Users/user/Desktop/upbit vs binance/binance_historical_data.csv
+2024-12-03 19:24:11,026 - INFO - Loaded Binance data: 66360 rows
+2024-12-03 19:24:11,026 - INFO - 
+Validating upbit data:
+2024-12-03 19:24:11,026 - INFO - Input DataFrame shape: (62852, 10)
+2024-12-03 19:24:11,026 - INFO - Available columns: ['market', 'source', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'trade_price', 'candle_acc_trade_volume', 'candle_acc_trade_price', 'timestamp']
+2024-12-03 19:24:11,026 - INFO - Required columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'trade_price', 'candle_acc_trade_volume']
+2024-12-03 19:24:11,026 - INFO - Normalized columns: ['market', 'source', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'trade_price', 'candle_acc_trade_volume', 'candle_acc_trade_price', 'timestamp']
+2024-12-03 19:24:11,048 - INFO - 
+Validating binance data:
+2024-12-03 19:24:11,048 - INFO - Input DataFrame shape: (66360, 9)
+2024-12-03 19:24:11,048 - INFO - Available columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'close_price', 'volume', 'quote_volume', 'market_type']
+2024-12-03 19:24:11,048 - INFO - Required columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'close_price', 'volume']
+2024-12-03 19:24:11,049 - INFO - Normalized columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'close_price', 'volume', 'quote_volume', 'market_type']
+2024-12-03 19:24:11,089 - INFO - Processing market 1INCH/USDT: 427 Upbit records, 632 Binance records
+2024-12-03 19:24:11,271 - INFO - Processing market AAVE/USDT: 427 Upbit records, 632 Binance records
+2024-12-03 19:24:11,434 - INFO - Processing market ADA/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:11,596 - INFO - Processing market AERGO/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:11,755 - INFO - Processing market AGLD/USDT: 427 Upbit records, 632 Binance records
+2024-12-03 19:24:11,945 - INFO - Processing market AKT/USDT: 427 Upbit records, 316 Binance records
+2024-12-03 19:24:12,102 - INFO - Processing market ALGO/USDT: 427 Upbit records, 632 Binance records
+2024-12-03 19:24:12,265 - INFO - Processing market ANKR/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:12,431 - INFO - Processing market APT/USDT: 427 Upbit records, 632 Binance records
+2024-12-03 19:24:12,635 - INFO - Processing market ARB/USDT: 427 Upbit records, 632 Binance records
+2024-12-03 19:24:12,845 - INFO - Processing market ARDR/USDT: 428 Upbit records, 316 Binance records
+2024-12-03 19:24:13,010 - INFO - Processing market ARK/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:13,175 - INFO - Processing market ASTR/USDT: 427 Upbit records, 632 Binance records
+2024-12-03 19:24:13,338 - INFO - Processing market ATOM/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:13,510 - INFO - Processing market AUCTION/USDT: 427 Upbit records, 632 Binance records
+2024-12-03 19:24:13,703 - INFO - Processing market AVAX/USDT: 427 Upbit records, 632 Binance records
+2024-12-03 19:24:13,863 - INFO - Processing market AXS/USDT: 427 Upbit records, 632 Binance records
+2024-12-03 19:24:14,024 - INFO - Processing market BAT/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:14,187 - INFO - Processing market BCH/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:14,407 - INFO - Processing market BIGTIME/USDT: 427 Upbit records, 316 Binance records
+2024-12-03 19:24:14,572 - INFO - Processing market BLUR/USDT: 427 Upbit records, 632 Binance records
+2024-12-03 19:24:14,740 - INFO - Processing market BONK/USDT: 427 Upbit records, 316 Binance records
+2024-12-03 19:24:14,898 - INFO - Processing market BSV/USDT: 428 Upbit records, 316 Binance records
+2024-12-03 19:24:15,058 - INFO - Processing market BTC/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:15,221 - INFO - Processing market CELO/USDT: 427 Upbit records, 632 Binance records
+2024-12-03 19:24:15,382 - INFO - Processing market CHZ/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:15,541 - INFO - Processing market CKB/USDT: 427 Upbit records, 632 Binance records
+2024-12-03 19:24:15,704 - INFO - Processing market CVC/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:15,964 - INFO - Processing market DOGE/USDT: 427 Upbit records, 632 Binance records
+2024-12-03 19:24:16,124 - INFO - Processing market DOT/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:16,287 - INFO - Processing market DRIFT/USDT: 427 Upbit records, 316 Binance records
+2024-12-03 19:24:16,447 - INFO - Processing market EGLD/USDT: 427 Upbit records, 632 Binance records
+2024-12-03 19:24:16,606 - INFO - Processing market ELF/USDT: 428 Upbit records, 316 Binance records
+2024-12-03 19:24:16,767 - INFO - Processing market ENS/USDT: 427 Upbit records, 632 Binance records
+2024-12-03 19:24:16,933 - INFO - Processing market EOS/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:17,092 - INFO - Processing market ETC/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:17,254 - INFO - Processing market ETH/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:17,413 - INFO - Processing market FLOW/USDT: 427 Upbit records, 632 Binance records
+2024-12-03 19:24:17,632 - INFO - Processing market G/USDT: 427 Upbit records, 632 Binance records
+2024-12-03 19:24:17,791 - INFO - Processing market GAS/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:17,957 - INFO - Processing market GLM/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:18,120 - INFO - Processing market GMT/USDT: 427 Upbit records, 632 Binance records
+2024-12-03 19:24:18,294 - INFO - Processing market GRT/USDT: 427 Upbit records, 632 Binance records
+2024-12-03 19:24:18,495 - INFO - Processing market HBAR/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:18,656 - INFO - Processing market HIFI/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:18,819 - INFO - Processing market HIVE/USDT: 428 Upbit records, 316 Binance records
+2024-12-03 19:24:18,979 - INFO - Processing market ICX/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:19,150 - INFO - Processing market ID/USDT: 427 Upbit records, 632 Binance records
+2024-12-03 19:24:19,311 - INFO - Processing market IMX/USDT: 427 Upbit records, 632 Binance records
+2024-12-03 19:24:19,532 - INFO - Processing market INJ/USDT: 427 Upbit records, 632 Binance records
+2024-12-03 19:24:19,754 - INFO - Processing market IOST/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:19,912 - INFO - Processing market IOTA/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:20,071 - INFO - Processing market IQ/USDT: 428 Upbit records, 316 Binance records
+2024-12-03 19:24:20,237 - INFO - Processing market JST/USDT: 428 Upbit records, 316 Binance records
+2024-12-03 19:24:20,397 - INFO - Processing market JUP/USDT: 427 Upbit records, 632 Binance records
+2024-12-03 19:24:20,556 - INFO - Processing market KAVA/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:20,752 - INFO - Processing market KNC/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:20,912 - INFO - Processing market LINK/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:21,072 - INFO - Processing market LOOM/USDT: 428 Upbit records, 316 Binance records
+2024-12-03 19:24:21,231 - INFO - Processing market LSK/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:21,459 - INFO - Processing market MANA/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:21,618 - INFO - Processing market MASK/USDT: 427 Upbit records, 632 Binance records
+2024-12-03 19:24:21,777 - INFO - Processing market MBL/USDT: 428 Upbit records, 316 Binance records
+2024-12-03 19:24:21,937 - INFO - Processing market MEW/USDT: 427 Upbit records, 316 Binance records
+2024-12-03 19:24:22,096 - INFO - Processing market MINA/USDT: 427 Upbit records, 632 Binance records
+2024-12-03 19:24:22,258 - INFO - Processing market MTL/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:22,416 - INFO - Processing market NEAR/USDT: 427 Upbit records, 632 Binance records
+2024-12-03 19:24:22,582 - INFO - Processing market NEO/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:22,742 - INFO - Processing market ONDO/USDT: 427 Upbit records, 316 Binance records
+2024-12-03 19:24:22,900 - INFO - Processing market ONG/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:23,147 - INFO - Processing market ONT/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:23,306 - INFO - Processing market ORBS/USDT: 428 Upbit records, 316 Binance records
+2024-12-03 19:24:23,466 - INFO - Processing market PENDLE/USDT: 427 Upbit records, 632 Binance records
+2024-12-03 19:24:23,628 - INFO - Processing market PEPE/USDT: 427 Upbit records, 316 Binance records
+2024-12-03 19:24:23,792 - INFO - Processing market POL/USDT: 427 Upbit records, 632 Binance records
+2024-12-03 19:24:23,953 - INFO - Processing market POLYX/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:24,112 - INFO - Processing market POWR/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:24,279 - INFO - Processing market PUNDIX/USDT: 427 Upbit records, 316 Binance records
+2024-12-03 19:24:24,479 - INFO - Processing market PYTH/USDT: 427 Upbit records, 632 Binance records
+2024-12-03 19:24:24,640 - INFO - Processing market QKC/USDT: 428 Upbit records, 316 Binance records
+2024-12-03 19:24:24,811 - INFO - Processing market QTUM/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:25,035 - INFO - Processing market SAFE/USDT: 427 Upbit records, 316 Binance records
+2024-12-03 19:24:25,197 - INFO - Processing market SAND/USDT: 427 Upbit records, 632 Binance records
+2024-12-03 19:24:25,358 - INFO - Processing market SC/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:25,550 - INFO - Processing market SEI/USDT: 427 Upbit records, 632 Binance records
+2024-12-03 19:24:25,714 - INFO - Processing market SHIB/USDT: 427 Upbit records, 316 Binance records
+2024-12-03 19:24:25,877 - INFO - Processing market SNT/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:26,041 - INFO - Processing market SOL/USDT: 427 Upbit records, 632 Binance records
+2024-12-03 19:24:26,200 - INFO - Processing market STEEM/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:26,361 - INFO - Processing market STG/USDT: 427 Upbit records, 632 Binance records
+2024-12-03 19:24:26,522 - INFO - Processing market STMX/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:26,748 - INFO - Processing market STORJ/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:26,908 - INFO - Processing market STPT/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:27,105 - INFO - Processing market STRAX/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:27,268 - INFO - Processing market STX/USDT: 427 Upbit records, 632 Binance records
+2024-12-03 19:24:27,429 - INFO - Processing market SUI/USDT: 427 Upbit records, 632 Binance records
+2024-12-03 19:24:27,588 - INFO - Processing market SXP/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:27,750 - INFO - Processing market T/USDT: 427 Upbit records, 632 Binance records
+2024-12-03 19:24:27,910 - INFO - Processing market TFUEL/USDT: 428 Upbit records, 316 Binance records
+2024-12-03 19:24:28,069 - INFO - Processing market THETA/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:28,234 - INFO - Processing market TON/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:28,454 - INFO - Processing market TRX/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:28,613 - INFO - Processing market UNI/USDT: 427 Upbit records, 632 Binance records
+2024-12-03 19:24:28,813 - INFO - Processing market USDC/USDT: 427 Upbit records, 632 Binance records
+2024-12-03 19:24:28,976 - INFO - Processing market UXLINK/USDT: 427 Upbit records, 316 Binance records
+2024-12-03 19:24:29,135 - INFO - Processing market VET/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:29,307 - INFO - Processing market W/USDT: 427 Upbit records, 632 Binance records
+2024-12-03 19:24:29,467 - INFO - Processing market WAVES/USDT: 428 Upbit records, 316 Binance records
+2024-12-03 19:24:29,625 - INFO - Processing market WAXP/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:29,788 - INFO - Processing market XEC/USDT: 427 Upbit records, 316 Binance records
+2024-12-03 19:24:29,982 - INFO - Processing market XEM/USDT: 428 Upbit records, 316 Binance records
+2024-12-03 19:24:30,141 - INFO - Processing market XLM/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:30,361 - INFO - Processing market XRP/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:30,531 - INFO - Processing market XTZ/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:30,694 - INFO - Processing market ZETA/USDT: 427 Upbit records, 316 Binance records
+2024-12-03 19:24:30,854 - INFO - Processing market ZIL/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:31,013 - INFO - Processing market ZRO/USDT: 427 Upbit records, 632 Binance records
+2024-12-03 19:24:31,174 - INFO - Processing market ZRX/USDT: 428 Upbit records, 632 Binance records
+2024-12-03 19:24:31,391 - INFO - Successfully combined data with 25950 matched pairs
+2024-12-03 19:24:31,654 - INFO - Successfully saved 25950 rows to combined_market_data.csv
+2024-12-03 19:24:31,654 - INFO - Preparing data for web service...
+2024-12-03 19:24:32,502 - INFO - Sending 25950 records to web service...
+2024-12-03 19:24:32,753 - ERROR - Error sending data: 500, Response: {
+  "message": "'timestamp_upbit'",
+  "status": "error"
+}
+
+2024-12-03 19:29:52,926 - DEBUG - Using selector: KqueueSelector
+2024-12-03 19:33:26,740 - INFO - Loading data from /Users/user/Desktop/upbit vs binance/upbit_data.csv
+2024-12-03 19:33:26,794 - INFO - Loaded Upbit data: 63145 rows
+2024-12-03 19:33:26,794 - INFO - Loading data from /Users/user/Desktop/upbit vs binance/binance_historical_data.csv
+2024-12-03 19:33:26,837 - INFO - Loaded Binance data: 66734 rows
+2024-12-03 19:33:26,837 - INFO - 
+Validating upbit data:
+2024-12-03 19:33:26,837 - INFO - Input DataFrame shape: (63145, 10)
+2024-12-03 19:33:26,837 - INFO - Available columns: ['market', 'source', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'trade_price', 'candle_acc_trade_volume', 'candle_acc_trade_price', 'timestamp']
+2024-12-03 19:33:26,837 - INFO - Required columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'trade_price', 'candle_acc_trade_volume']
+2024-12-03 19:33:26,837 - INFO - Normalized columns: ['market', 'source', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'trade_price', 'candle_acc_trade_volume', 'candle_acc_trade_price', 'timestamp']
+2024-12-03 19:33:26,858 - INFO - 
+Validating binance data:
+2024-12-03 19:33:26,859 - INFO - Input DataFrame shape: (66734, 9)
+2024-12-03 19:33:26,859 - INFO - Available columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'close_price', 'volume', 'quote_volume', 'market_type']
+2024-12-03 19:33:26,859 - INFO - Required columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'close_price', 'volume']
+2024-12-03 19:33:26,859 - INFO - Normalized columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'close_price', 'volume', 'quote_volume', 'market_type']
+2024-12-03 19:33:26,901 - INFO - Processing market 1INCH/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:33:27,070 - INFO - Processing market AAVE/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:33:27,236 - INFO - Processing market ADA/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:33:27,399 - INFO - Processing market AERGO/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:33:27,560 - INFO - Processing market AGLD/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:33:27,781 - INFO - Processing market AKT/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:33:27,943 - INFO - Processing market ALGO/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:33:28,105 - INFO - Processing market ANKR/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:33:28,265 - INFO - Processing market APT/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:33:28,459 - INFO - Processing market ARB/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:33:28,619 - INFO - Processing market ARDR/USDT: 430 Upbit records, 317 Binance records
+2024-12-03 19:33:28,779 - INFO - Processing market ARK/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:33:28,942 - INFO - Processing market ASTR/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:33:29,102 - INFO - Processing market ATOM/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:33:29,320 - INFO - Processing market AUCTION/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:33:29,483 - INFO - Processing market AVAX/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:33:29,646 - INFO - Processing market AXS/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:33:29,809 - INFO - Processing market BAT/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:33:29,970 - INFO - Processing market BCH/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:33:30,131 - INFO - Processing market BIGTIME/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:33:30,326 - INFO - Processing market BLUR/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:33:30,490 - INFO - Processing market BONK/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:33:30,651 - INFO - Processing market BSV/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:33:30,811 - INFO - Processing market BTC/USDT: 429 Upbit records, 634 Binance records
+2024-12-03 19:33:30,975 - INFO - Processing market CELO/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:33:31,193 - INFO - Processing market CHZ/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:33:31,354 - INFO - Processing market CKB/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:33:31,517 - INFO - Processing market CVC/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:33:31,678 - INFO - Processing market DOGE/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:33:31,839 - INFO - Processing market DOT/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:33:32,001 - INFO - Processing market DRIFT/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:33:32,205 - INFO - Processing market EGLD/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:33:32,367 - INFO - Processing market ELF/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:33:32,586 - INFO - Processing market ENS/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:33:32,747 - INFO - Processing market EOS/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:33:32,912 - INFO - Processing market ETC/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:33:33,074 - INFO - Processing market ETH/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:33:33,238 - INFO - Processing market FLOW/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:33:33,400 - INFO - Processing market G/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:33:33,561 - INFO - Processing market GAS/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:33:33,726 - INFO - Processing market GLM/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:33:33,886 - INFO - Processing market GMT/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:33:34,049 - INFO - Processing market GRT/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:33:34,213 - INFO - Processing market HBAR/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:33:34,491 - INFO - Processing market HIFI/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:33:34,655 - INFO - Processing market HIVE/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:33:34,816 - INFO - Processing market ICX/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:33:34,981 - INFO - Processing market ID/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:33:35,142 - INFO - Processing market IMX/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:33:35,305 - INFO - Processing market INJ/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:33:35,470 - INFO - Processing market IOST/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:33:35,632 - INFO - Processing market IOTA/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:33:35,828 - INFO - Processing market IQ/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:33:35,991 - INFO - Processing market JST/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:33:36,153 - INFO - Processing market JUP/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:33:36,372 - INFO - Processing market KAVA/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:33:36,534 - INFO - Processing market KNC/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:33:36,732 - INFO - Processing market LINK/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:33:36,893 - INFO - Processing market LOOM/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:33:37,057 - INFO - Processing market LSK/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:33:37,224 - INFO - Processing market MANA/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:33:37,385 - INFO - Processing market MASK/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:33:37,548 - INFO - Processing market MBL/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:33:37,749 - INFO - Processing market MEW/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:33:37,915 - INFO - Processing market MINA/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:33:38,135 - INFO - Processing market MTL/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:33:38,300 - INFO - Processing market NEAR/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:33:38,464 - INFO - Processing market NEO/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:33:38,626 - INFO - Processing market ONDO/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:33:38,817 - INFO - Processing market ONG/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:33:38,982 - INFO - Processing market ONT/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:33:39,143 - INFO - Processing market ORBS/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:33:39,305 - INFO - Processing market PENDLE/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:33:39,468 - INFO - Processing market PEPE/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:33:39,629 - INFO - Processing market POL/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:33:39,791 - INFO - Processing market POLYX/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:33:40,015 - INFO - Processing market POWR/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:33:40,214 - INFO - Processing market PUNDIX/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:33:40,375 - INFO - Processing market PYTH/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:33:40,539 - INFO - Processing market QKC/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:33:40,701 - INFO - Processing market QTUM/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:33:40,863 - INFO - Processing market SAFE/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:33:41,025 - INFO - Processing market SAND/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:33:41,191 - INFO - Processing market SC/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:33:41,352 - INFO - Processing market SEI/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:33:41,608 - INFO - Processing market SHIB/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:33:41,770 - INFO - Processing market SNT/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:33:41,934 - INFO - Processing market SOL/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:33:42,099 - INFO - Processing market STEEM/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:33:42,260 - INFO - Processing market STG/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:33:42,424 - INFO - Processing market STMX/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:33:42,585 - INFO - Processing market STORJ/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:33:42,785 - INFO - Processing market STPT/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:33:42,951 - INFO - Processing market STRAX/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:33:43,113 - INFO - Processing market STX/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:33:43,275 - INFO - Processing market SUI/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:33:43,500 - INFO - Processing market SXP/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:33:43,696 - INFO - Processing market T/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:33:43,860 - INFO - Processing market TFUEL/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:33:44,023 - INFO - Processing market THETA/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:33:44,188 - INFO - Processing market TON/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:33:44,350 - INFO - Processing market TRX/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:33:44,511 - INFO - Processing market UNI/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:33:44,677 - INFO - Processing market USDC/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:33:44,838 - INFO - Processing market UXLINK/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:33:45,095 - INFO - Processing market VET/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:33:45,258 - INFO - Processing market W/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:33:45,422 - INFO - Processing market WAVES/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:33:45,583 - INFO - Processing market WAXP/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:33:45,748 - INFO - Processing market XEC/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:33:45,911 - INFO - Processing market XEM/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:33:46,074 - INFO - Processing market XLM/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:33:46,271 - INFO - Processing market XRP/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:33:46,433 - INFO - Processing market XTZ/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:33:46,594 - INFO - Processing market ZETA/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:33:46,817 - INFO - Processing market ZIL/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:33:46,981 - INFO - Processing market ZRO/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:33:47,147 - INFO - Processing market ZRX/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:33:47,364 - INFO - Successfully combined data with 26185 matched pairs
+2024-12-03 19:33:47,600 - INFO - Successfully saved 26185 rows to combined_market_data.csv
+2024-12-03 19:33:47,600 - INFO - Preparing data for web service...
+2024-12-03 19:33:48,491 - INFO - Sending 26185 records to web service...
+2024-12-03 19:33:48,622 - ERROR - Error sending data to web service: Cannot connect to host localhost:5000 ssl:default [Multiple exceptions: [Errno 61] Connect call failed ('127.0.0.1', 5000), [Errno 61] Connect call failed ('::1', 5000, 0, 0)]
+Traceback (most recent call last):
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/aiohttp/connector.py", line 1109, in _wrap_create_connection
+    sock = await aiohappyeyeballs.start_connection(
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/aiohappyeyeballs/impl.py", line 123, in start_connection
+    raise OSError(first_errno, msg)
+ConnectionRefusedError: [Errno 61] Multiple exceptions: [Errno 61] Connect call failed ('127.0.0.1', 5000), [Errno 61] Connect call failed ('::1', 5000, 0, 0)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/user/Desktop/upbit vs binance/data_combiner.py", line 90, in send_to_web_service
+    async with session.post(
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/aiohttp/client.py", line 1423, in __aenter__
+    self._resp: _RetType = await self._coro
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/aiohttp/client.py", line 701, in _request
+    conn = await self._connector.connect(
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/aiohttp/connector.py", line 544, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/aiohttp/connector.py", line 1050, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/aiohttp/connector.py", line 1394, in _create_direct_connection
+    raise last_exc
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/aiohttp/connector.py", line 1363, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/aiohttp/connector.py", line 1124, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host localhost:5000 ssl:default [Multiple exceptions: [Errno 61] Connect call failed ('127.0.0.1', 5000), [Errno 61] Connect call failed ('::1', 5000, 0, 0)]
+2024-12-03 19:35:56,868 - INFO - Loading data from /Users/user/Desktop/upbit vs binance/upbit_data.csv
+2024-12-03 19:35:56,928 - INFO - Loaded Upbit data: 63145 rows
+2024-12-03 19:35:56,928 - INFO - Loading data from /Users/user/Desktop/upbit vs binance/binance_historical_data.csv
+2024-12-03 19:35:56,975 - INFO - Loaded Binance data: 66734 rows
+2024-12-03 19:35:56,975 - INFO - 
+Validating upbit data:
+2024-12-03 19:35:56,975 - INFO - Input DataFrame shape: (63145, 10)
+2024-12-03 19:35:56,975 - INFO - Available columns: ['market', 'source', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'trade_price', 'candle_acc_trade_volume', 'candle_acc_trade_price', 'timestamp']
+2024-12-03 19:35:56,975 - INFO - Required columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'trade_price', 'candle_acc_trade_volume']
+2024-12-03 19:35:56,976 - INFO - Normalized columns: ['market', 'source', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'trade_price', 'candle_acc_trade_volume', 'candle_acc_trade_price', 'timestamp']
+2024-12-03 19:35:57,001 - INFO - 
+Validating binance data:
+2024-12-03 19:35:57,001 - INFO - Input DataFrame shape: (66734, 9)
+2024-12-03 19:35:57,001 - INFO - Available columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'close_price', 'volume', 'quote_volume', 'market_type']
+2024-12-03 19:35:57,002 - INFO - Required columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'close_price', 'volume']
+2024-12-03 19:35:57,002 - INFO - Normalized columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'close_price', 'volume', 'quote_volume', 'market_type']
+2024-12-03 19:35:57,048 - INFO - Processing market 1INCH/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:35:57,217 - INFO - Processing market AAVE/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:35:57,379 - INFO - Processing market ADA/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:35:57,579 - INFO - Processing market AERGO/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:35:57,801 - INFO - Processing market AGLD/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:35:57,965 - INFO - Processing market AKT/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:35:58,123 - INFO - Processing market ALGO/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:35:58,282 - INFO - Processing market ANKR/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:35:58,483 - INFO - Processing market APT/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:35:58,650 - INFO - Processing market ARB/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:35:58,843 - INFO - Processing market ARDR/USDT: 430 Upbit records, 317 Binance records
+2024-12-03 19:35:59,006 - INFO - Processing market ARK/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:35:59,168 - INFO - Processing market ASTR/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:35:59,386 - INFO - Processing market ATOM/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:35:59,548 - INFO - Processing market AUCTION/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:35:59,707 - INFO - Processing market AVAX/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:35:59,866 - INFO - Processing market AXS/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:36:00,060 - INFO - Processing market BAT/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:36:00,223 - INFO - Processing market BCH/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:36:00,382 - INFO - Processing market BIGTIME/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:36:00,589 - INFO - Processing market BLUR/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:36:00,753 - INFO - Processing market BONK/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:36:00,913 - INFO - Processing market BSV/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:36:01,130 - INFO - Processing market BTC/USDT: 429 Upbit records, 634 Binance records
+2024-12-03 19:36:01,291 - INFO - Processing market CELO/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:36:01,485 - INFO - Processing market CHZ/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:36:01,650 - INFO - Processing market CKB/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:36:01,813 - INFO - Processing market CVC/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:36:01,974 - INFO - Processing market DOGE/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:36:02,134 - INFO - Processing market DOT/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:36:02,294 - INFO - Processing market DRIFT/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:36:02,513 - INFO - Processing market EGLD/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:36:02,675 - INFO - Processing market ELF/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:36:02,834 - INFO - Processing market ENS/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:36:03,027 - INFO - Processing market EOS/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:36:03,190 - INFO - Processing market ETC/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:36:03,350 - INFO - Processing market ETH/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:36:03,512 - INFO - Processing market FLOW/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:36:03,675 - INFO - Processing market G/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:36:03,834 - INFO - Processing market GAS/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:36:04,032 - INFO - Processing market GLM/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:36:04,195 - INFO - Processing market GMT/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:36:04,413 - INFO - Processing market GRT/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:36:04,574 - INFO - Processing market HBAR/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:36:04,735 - INFO - Processing market HIFI/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:36:04,895 - INFO - Processing market HIVE/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:36:05,056 - INFO - Processing market ICX/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:36:05,217 - INFO - Processing market ID/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:36:05,376 - INFO - Processing market IMX/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:36:05,656 - INFO - Processing market INJ/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:36:05,817 - INFO - Processing market IOST/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:36:05,977 - INFO - Processing market IOTA/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:36:06,136 - INFO - Processing market IQ/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:36:06,295 - INFO - Processing market JST/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:36:06,454 - INFO - Processing market JUP/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:36:06,632 - INFO - Processing market KAVA/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:36:06,797 - INFO - Processing market KNC/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:36:06,964 - INFO - Processing market LINK/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:36:07,124 - INFO - Processing market LOOM/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:36:07,375 - INFO - Processing market LSK/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:36:07,550 - INFO - Processing market MANA/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:36:07,714 - INFO - Processing market MASK/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:36:07,876 - INFO - Processing market MBL/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:36:08,053 - INFO - Processing market MEW/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:36:08,215 - INFO - Processing market MINA/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:36:08,373 - INFO - Processing market MTL/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:36:08,534 - INFO - Processing market NEAR/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:36:08,696 - INFO - Processing market NEO/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:36:08,856 - INFO - Processing market ONDO/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:36:09,055 - INFO - Processing market ONG/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:36:09,275 - INFO - Processing market ONT/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:36:09,434 - INFO - Processing market ORBS/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:36:09,593 - INFO - Processing market PENDLE/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:36:09,755 - INFO - Processing market PEPE/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:36:09,914 - INFO - Processing market POL/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:36:10,075 - INFO - Processing market POLYX/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:36:10,237 - INFO - Processing market POWR/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:36:10,460 - INFO - Processing market PUNDIX/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:36:10,619 - INFO - Processing market PYTH/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:36:10,781 - INFO - Processing market QKC/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:36:10,973 - INFO - Processing market QTUM/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:36:11,196 - INFO - Processing market SAFE/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:36:11,356 - INFO - Processing market SAND/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:36:11,520 - INFO - Processing market SC/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:36:11,684 - INFO - Processing market SEI/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:36:11,844 - INFO - Processing market SHIB/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:36:12,018 - INFO - Processing market SNT/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:36:12,179 - INFO - Processing market SOL/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:36:12,342 - INFO - Processing market STEEM/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:36:12,541 - INFO - Processing market STG/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:36:12,706 - INFO - Processing market STMX/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:36:12,865 - INFO - Processing market STORJ/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:36:13,080 - INFO - Processing market STPT/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:36:13,243 - INFO - Processing market STRAX/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:36:13,403 - INFO - Processing market STX/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:36:13,566 - INFO - Processing market SUI/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:36:13,730 - INFO - Processing market SXP/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:36:13,891 - INFO - Processing market T/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:36:14,053 - INFO - Processing market TFUEL/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:36:14,214 - INFO - Processing market THETA/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:36:14,374 - INFO - Processing market TON/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:36:14,570 - INFO - Processing market TRX/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:36:14,738 - INFO - Processing market UNI/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:36:14,898 - INFO - Processing market USDC/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:36:15,117 - INFO - Processing market UXLINK/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:36:15,278 - INFO - Processing market VET/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:36:15,440 - INFO - Processing market W/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:36:15,600 - INFO - Processing market WAVES/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:36:15,760 - INFO - Processing market WAXP/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:36:15,921 - INFO - Processing market XEC/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:36:16,081 - INFO - Processing market XEM/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:36:16,239 - INFO - Processing market XLM/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:36:16,400 - INFO - Processing market XRP/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:36:16,562 - INFO - Processing market XTZ/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:36:16,725 - INFO - Processing market ZETA/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:36:16,977 - INFO - Processing market ZIL/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:36:17,138 - INFO - Processing market ZRO/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:36:17,299 - INFO - Processing market ZRX/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:36:17,517 - INFO - Successfully combined data with 26185 matched pairs
+2024-12-03 19:36:17,752 - INFO - Successfully saved 26185 rows to combined_market_data.csv
+2024-12-03 19:37:41,628 - INFO - Loading data from /Users/user/Desktop/upbit vs binance/upbit_data.csv
+2024-12-03 19:37:41,684 - INFO - Loaded Upbit data: 63145 rows
+2024-12-03 19:37:41,684 - INFO - Loading data from /Users/user/Desktop/upbit vs binance/binance_historical_data.csv
+2024-12-03 19:37:41,723 - INFO - Loaded Binance data: 66734 rows
+2024-12-03 19:37:41,723 - INFO - 
+Validating upbit data:
+2024-12-03 19:37:41,723 - INFO - Input DataFrame shape: (63145, 10)
+2024-12-03 19:37:41,723 - INFO - Available columns: ['market', 'source', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'trade_price', 'candle_acc_trade_volume', 'candle_acc_trade_price', 'timestamp']
+2024-12-03 19:37:41,723 - INFO - Required columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'trade_price', 'candle_acc_trade_volume']
+2024-12-03 19:37:41,724 - INFO - Normalized columns: ['market', 'source', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'trade_price', 'candle_acc_trade_volume', 'candle_acc_trade_price', 'timestamp']
+2024-12-03 19:37:41,745 - INFO - 
+Validating binance data:
+2024-12-03 19:37:41,745 - INFO - Input DataFrame shape: (66734, 9)
+2024-12-03 19:37:41,745 - INFO - Available columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'close_price', 'volume', 'quote_volume', 'market_type']
+2024-12-03 19:37:41,745 - INFO - Required columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'close_price', 'volume']
+2024-12-03 19:37:41,746 - INFO - Normalized columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'close_price', 'volume', 'quote_volume', 'market_type']
+2024-12-03 19:37:41,789 - INFO - Processing market 1INCH/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:37:41,960 - INFO - Processing market AAVE/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:37:42,124 - INFO - Processing market ADA/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:37:42,326 - INFO - Processing market AERGO/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:37:42,548 - INFO - Processing market AGLD/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:37:42,723 - INFO - Processing market AKT/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:37:42,882 - INFO - Processing market ALGO/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:37:43,043 - INFO - Processing market ANKR/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:37:43,205 - INFO - Processing market APT/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:37:43,365 - INFO - Processing market ARB/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:37:43,527 - INFO - Processing market ARDR/USDT: 430 Upbit records, 317 Binance records
+2024-12-03 19:37:43,687 - INFO - Processing market ARK/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:37:43,855 - INFO - Processing market ASTR/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:37:44,073 - INFO - Processing market ATOM/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:37:44,233 - INFO - Processing market AUCTION/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:37:44,393 - INFO - Processing market AVAX/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:37:44,553 - INFO - Processing market AXS/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:37:44,711 - INFO - Processing market BAT/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:37:44,878 - INFO - Processing market BCH/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:37:45,039 - INFO - Processing market BIGTIME/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:37:45,201 - INFO - Processing market BLUR/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:37:45,360 - INFO - Processing market BONK/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:37:45,520 - INFO - Processing market BSV/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:37:45,809 - INFO - Processing market BTC/USDT: 429 Upbit records, 634 Binance records
+2024-12-03 19:37:45,977 - INFO - Processing market CELO/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:37:46,146 - INFO - Processing market CHZ/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:37:46,314 - INFO - Processing market CKB/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:37:46,540 - INFO - Processing market CVC/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:37:46,701 - INFO - Processing market DOGE/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:37:46,864 - INFO - Processing market DOT/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:37:47,025 - INFO - Processing market DRIFT/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:37:47,201 - INFO - Processing market EGLD/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:37:47,365 - INFO - Processing market ELF/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:37:47,529 - INFO - Processing market ENS/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:37:47,726 - INFO - Processing market EOS/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:37:47,890 - INFO - Processing market ETC/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:37:48,053 - INFO - Processing market ETH/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:37:48,217 - INFO - Processing market FLOW/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:37:48,441 - INFO - Processing market G/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:37:48,601 - INFO - Processing market GAS/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:37:48,762 - INFO - Processing market GLM/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:37:48,924 - INFO - Processing market GMT/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:37:49,084 - INFO - Processing market GRT/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:37:49,243 - INFO - Processing market HBAR/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:37:49,410 - INFO - Processing market HIFI/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:37:49,573 - INFO - Processing market HIVE/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:37:49,734 - INFO - Processing market ICX/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:37:49,898 - INFO - Processing market ID/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:37:50,152 - INFO - Processing market IMX/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:37:50,314 - INFO - Processing market INJ/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:37:50,478 - INFO - Processing market IOST/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:37:50,642 - INFO - Processing market IOTA/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:37:50,802 - INFO - Processing market IQ/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:37:50,962 - INFO - Processing market JST/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:37:51,123 - INFO - Processing market JUP/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:37:51,285 - INFO - Processing market KAVA/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:37:51,445 - INFO - Processing market KNC/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:37:51,609 - INFO - Processing market LINK/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:37:51,775 - INFO - Processing market LOOM/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:37:51,995 - INFO - Processing market LSK/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:37:52,156 - INFO - Processing market MANA/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:37:52,317 - INFO - Processing market MASK/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:37:52,511 - INFO - Processing market MBL/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:37:52,766 - INFO - Processing market MEW/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:37:52,938 - INFO - Processing market MINA/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:37:53,100 - INFO - Processing market MTL/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:37:53,261 - INFO - Processing market NEAR/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:37:53,424 - INFO - Processing market NEO/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:37:53,586 - INFO - Processing market ONDO/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:37:53,751 - INFO - Processing market ONG/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:37:54,015 - INFO - Processing market ONT/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:37:54,184 - INFO - Processing market ORBS/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:37:54,346 - INFO - Processing market PENDLE/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:37:54,507 - INFO - Processing market PEPE/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:37:54,669 - INFO - Processing market POL/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:37:54,833 - INFO - Processing market POLYX/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:37:54,995 - INFO - Processing market POWR/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:37:55,162 - INFO - Processing market PUNDIX/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:37:55,323 - INFO - Processing market PYTH/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:37:55,486 - INFO - Processing market QKC/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:37:55,649 - INFO - Processing market QTUM/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:37:55,871 - INFO - Processing market SAFE/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:37:56,032 - INFO - Processing market SAND/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:37:56,205 - INFO - Processing market SC/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:37:56,375 - INFO - Processing market SEI/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:37:56,538 - INFO - Processing market SHIB/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:37:56,738 - INFO - Processing market SNT/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:37:56,902 - INFO - Processing market SOL/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:37:57,066 - INFO - Processing market STEEM/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:37:57,230 - INFO - Processing market STG/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:37:57,460 - INFO - Processing market STMX/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:37:57,626 - INFO - Processing market STORJ/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:37:57,791 - INFO - Processing market STPT/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:37:57,954 - INFO - Processing market STRAX/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:37:58,119 - INFO - Processing market STX/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:37:58,282 - INFO - Processing market SUI/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:37:58,445 - INFO - Processing market SXP/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:37:58,615 - INFO - Processing market T/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:37:58,812 - INFO - Processing market TFUEL/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:37:59,033 - INFO - Processing market THETA/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:37:59,198 - INFO - Processing market TON/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:37:59,362 - INFO - Processing market TRX/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:37:59,527 - INFO - Processing market UNI/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:37:59,695 - INFO - Processing market USDC/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:37:59,862 - INFO - Processing market UXLINK/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:38:00,027 - INFO - Processing market VET/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:38:00,192 - INFO - Processing market W/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:38:00,357 - INFO - Processing market WAVES/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:38:00,522 - INFO - Processing market WAXP/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:38:00,732 - INFO - Processing market XEC/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:38:00,969 - INFO - Processing market XEM/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:38:01,133 - INFO - Processing market XLM/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:38:01,302 - INFO - Processing market XRP/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:38:01,470 - INFO - Processing market XTZ/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:38:01,631 - INFO - Processing market ZETA/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:38:01,795 - INFO - Processing market ZIL/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:38:01,996 - INFO - Processing market ZRO/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:38:02,163 - INFO - Processing market ZRX/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:38:02,381 - INFO - Successfully combined data with 26185 matched pairs
+2024-12-03 19:38:02,664 - INFO - Successfully saved 26185 rows to combined_market_data.csv
+2024-12-03 19:40:32,010 - DEBUG - Using selector: KqueueSelector
+2024-12-03 19:40:32,012 - INFO - Loading data from /Users/user/Desktop/upbit vs binance/upbit_data.csv
+2024-12-03 19:40:32,074 - INFO - Loaded Upbit data: 63145 rows
+2024-12-03 19:40:32,074 - INFO - Loading data from /Users/user/Desktop/upbit vs binance/binance_historical_data.csv
+2024-12-03 19:40:32,124 - INFO - Loaded Binance data: 66734 rows
+2024-12-03 19:40:32,124 - INFO - 
+Validating upbit data:
+2024-12-03 19:40:32,124 - INFO - Input DataFrame shape: (63145, 10)
+2024-12-03 19:40:32,124 - INFO - Available columns: ['market', 'source', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'trade_price', 'candle_acc_trade_volume', 'candle_acc_trade_price', 'timestamp']
+2024-12-03 19:40:32,124 - INFO - Required columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'trade_price', 'candle_acc_trade_volume']
+2024-12-03 19:40:32,124 - INFO - Normalized columns: ['market', 'source', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'trade_price', 'candle_acc_trade_volume', 'candle_acc_trade_price', 'timestamp']
+2024-12-03 19:40:32,147 - INFO - 
+Validating binance data:
+2024-12-03 19:40:32,147 - INFO - Input DataFrame shape: (66734, 9)
+2024-12-03 19:40:32,147 - INFO - Available columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'close_price', 'volume', 'quote_volume', 'market_type']
+2024-12-03 19:40:32,147 - INFO - Required columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'close_price', 'volume']
+2024-12-03 19:40:32,147 - INFO - Normalized columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'close_price', 'volume', 'quote_volume', 'market_type']
+2024-12-03 19:40:32,194 - INFO - Processing market 1INCH/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:40:32,365 - INFO - Processing market AAVE/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:40:32,530 - INFO - Processing market ADA/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:40:32,702 - INFO - Processing market AERGO/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:40:32,886 - INFO - Processing market AGLD/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:40:33,099 - INFO - Processing market AKT/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:40:33,275 - INFO - Processing market ALGO/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:40:33,442 - INFO - Processing market ANKR/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:40:33,612 - INFO - Processing market APT/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:40:33,849 - INFO - Processing market ARB/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:40:34,020 - INFO - Processing market ARDR/USDT: 430 Upbit records, 317 Binance records
+2024-12-03 19:40:34,183 - INFO - Processing market ARK/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:40:34,532 - INFO - Processing market ASTR/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:40:34,735 - INFO - Processing market ATOM/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:40:34,899 - INFO - Processing market AUCTION/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:40:35,063 - INFO - Processing market AVAX/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:40:35,291 - INFO - Processing market AXS/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:40:35,484 - INFO - Processing market BAT/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:40:35,651 - INFO - Processing market BCH/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:40:35,842 - INFO - Processing market BIGTIME/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:40:36,014 - INFO - Processing market BLUR/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:40:36,215 - INFO - Processing market BONK/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:40:36,379 - INFO - Processing market BSV/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:40:36,541 - INFO - Processing market BTC/USDT: 429 Upbit records, 634 Binance records
+2024-12-03 19:40:36,706 - INFO - Processing market CELO/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:40:36,874 - INFO - Processing market CHZ/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:40:37,100 - INFO - Processing market CKB/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:40:37,261 - INFO - Processing market CVC/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:40:37,425 - INFO - Processing market DOGE/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:40:37,590 - INFO - Processing market DOT/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:40:37,759 - INFO - Processing market DRIFT/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:40:37,970 - INFO - Processing market EGLD/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:40:38,138 - INFO - Processing market ELF/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:40:38,300 - INFO - Processing market ENS/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:40:38,459 - INFO - Processing market EOS/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:40:38,627 - INFO - Processing market ETC/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:40:38,842 - INFO - Processing market ETH/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:40:39,006 - INFO - Processing market FLOW/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:40:39,171 - INFO - Processing market G/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:40:39,331 - INFO - Processing market GAS/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:40:39,494 - INFO - Processing market GLM/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:40:39,683 - INFO - Processing market GMT/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:40:39,848 - INFO - Processing market GRT/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:40:40,049 - INFO - Processing market HBAR/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:40:40,226 - INFO - Processing market HIFI/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:40:40,457 - INFO - Processing market HIVE/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:40:40,622 - INFO - Processing market ICX/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:40:40,792 - INFO - Processing market ID/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:40:40,960 - INFO - Processing market IMX/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:40:41,125 - INFO - Processing market INJ/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:40:41,296 - INFO - Processing market IOST/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:40:41,501 - INFO - Processing market IOTA/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:40:41,670 - INFO - Processing market IQ/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:40:41,838 - INFO - Processing market JST/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:40:42,010 - INFO - Processing market JUP/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:40:42,236 - INFO - Processing market KAVA/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:40:42,403 - INFO - Processing market KNC/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:40:42,570 - INFO - Processing market LINK/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:40:42,839 - INFO - Processing market LOOM/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:40:43,008 - INFO - Processing market LSK/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:40:43,174 - INFO - Processing market MANA/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:40:43,412 - INFO - Processing market MASK/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:40:43,585 - INFO - Processing market MBL/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:40:43,768 - INFO - Processing market MEW/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:40:43,935 - INFO - Processing market MINA/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:40:44,156 - INFO - Processing market MTL/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:40:44,318 - INFO - Processing market NEAR/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:40:44,480 - INFO - Processing market NEO/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:40:44,642 - INFO - Processing market ONDO/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:40:44,810 - INFO - Processing market ONG/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:40:45,009 - INFO - Processing market ONT/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:40:45,177 - INFO - Processing market ORBS/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:40:45,342 - INFO - Processing market PENDLE/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:40:45,506 - INFO - Processing market PEPE/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:40:45,735 - INFO - Processing market POL/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:40:45,909 - INFO - Processing market POLYX/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:40:46,074 - INFO - Processing market POWR/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:40:46,243 - INFO - Processing market PUNDIX/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:40:46,414 - INFO - Processing market PYTH/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:40:46,620 - INFO - Processing market QKC/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:40:46,785 - INFO - Processing market QTUM/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:40:46,956 - INFO - Processing market SAFE/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:40:47,121 - INFO - Processing market SAND/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:40:47,287 - INFO - Processing market SC/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:40:47,484 - INFO - Processing market SEI/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:40:47,692 - INFO - Processing market SHIB/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:40:47,858 - INFO - Processing market SNT/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:40:48,023 - INFO - Processing market SOL/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:40:48,229 - INFO - Processing market STEEM/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:40:48,393 - INFO - Processing market STG/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:40:48,557 - INFO - Processing market STMX/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:40:48,719 - INFO - Processing market STORJ/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:40:48,881 - INFO - Processing market STPT/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:40:49,044 - INFO - Processing market STRAX/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:40:49,211 - INFO - Processing market STX/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:40:49,436 - INFO - Processing market SUI/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:40:49,598 - INFO - Processing market SXP/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:40:49,799 - INFO - Processing market T/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:40:49,964 - INFO - Processing market TFUEL/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:40:50,126 - INFO - Processing market THETA/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:40:50,293 - INFO - Processing market TON/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:40:50,462 - INFO - Processing market TRX/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:40:50,623 - INFO - Processing market UNI/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:40:50,789 - INFO - Processing market USDC/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:40:50,988 - INFO - Processing market UXLINK/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:40:51,208 - INFO - Processing market VET/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:40:51,371 - INFO - Processing market W/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:40:51,546 - INFO - Processing market WAVES/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:40:51,714 - INFO - Processing market WAXP/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:40:51,877 - INFO - Processing market XEC/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:40:52,040 - INFO - Processing market XEM/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:40:52,205 - INFO - Processing market XLM/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:40:52,370 - INFO - Processing market XRP/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:40:52,541 - INFO - Processing market XTZ/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:40:52,808 - INFO - Processing market ZETA/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:40:52,974 - INFO - Processing market ZIL/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:40:53,137 - INFO - Processing market ZRO/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:40:53,301 - INFO - Processing market ZRX/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:40:53,520 - INFO - Successfully combined data with 26185 matched pairs
+2024-12-03 19:40:53,761 - INFO - Successfully saved 26185 rows to combined_market_data.csv
+2024-12-03 19:40:53,761 - INFO - Preparing data for web service...
+2024-12-03 19:40:54,650 - INFO - Sending 26185 records to web service...
+2024-12-03 19:40:54,937 - INFO - Data successfully sent to web service: 2024-12-03 19:40:54.937618
+2024-12-03 19:42:25,145 - DEBUG - Using selector: KqueueSelector
+2024-12-03 19:42:25,146 - INFO - Loading data from /Users/user/Desktop/upbit vs binance/upbit_data.csv
+2024-12-03 19:42:25,207 - INFO - Loaded Upbit data: 63145 rows
+2024-12-03 19:42:25,207 - INFO - Loading data from /Users/user/Desktop/upbit vs binance/binance_historical_data.csv
+2024-12-03 19:42:25,257 - INFO - Loaded Binance data: 66734 rows
+2024-12-03 19:42:25,257 - INFO - 
+Validating upbit data:
+2024-12-03 19:42:25,257 - INFO - Input DataFrame shape: (63145, 10)
+2024-12-03 19:42:25,257 - INFO - Available columns: ['market', 'source', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'trade_price', 'candle_acc_trade_volume', 'candle_acc_trade_price', 'timestamp']
+2024-12-03 19:42:25,257 - INFO - Required columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'trade_price', 'candle_acc_trade_volume']
+2024-12-03 19:42:25,257 - INFO - Normalized columns: ['market', 'source', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'trade_price', 'candle_acc_trade_volume', 'candle_acc_trade_price', 'timestamp']
+2024-12-03 19:42:25,279 - INFO - 
+Validating binance data:
+2024-12-03 19:42:25,279 - INFO - Input DataFrame shape: (66734, 9)
+2024-12-03 19:42:25,279 - INFO - Available columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'close_price', 'volume', 'quote_volume', 'market_type']
+2024-12-03 19:42:25,279 - INFO - Required columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'close_price', 'volume']
+2024-12-03 19:42:25,280 - INFO - Normalized columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'close_price', 'volume', 'quote_volume', 'market_type']
+2024-12-03 19:42:25,321 - INFO - Processing market 1INCH/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:42:25,493 - INFO - Processing market AAVE/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:42:25,657 - INFO - Processing market ADA/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:42:25,821 - INFO - Processing market AERGO/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:42:25,985 - INFO - Processing market AGLD/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:42:26,160 - INFO - Processing market AKT/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:42:26,325 - INFO - Processing market ALGO/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:42:26,489 - INFO - Processing market ANKR/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:42:26,656 - INFO - Processing market APT/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:42:26,885 - INFO - Processing market ARB/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:42:27,081 - INFO - Processing market ARDR/USDT: 430 Upbit records, 317 Binance records
+2024-12-03 19:42:27,246 - INFO - Processing market ARK/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:42:27,410 - INFO - Processing market ASTR/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:42:27,569 - INFO - Processing market ATOM/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:42:27,733 - INFO - Processing market AUCTION/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:42:27,892 - INFO - Processing market AVAX/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:42:28,049 - INFO - Processing market AXS/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:42:28,205 - INFO - Processing market BAT/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:42:28,363 - INFO - Processing market BCH/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:42:28,579 - INFO - Processing market BIGTIME/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:42:28,735 - INFO - Processing market BLUR/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:42:28,889 - INFO - Processing market BONK/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:42:29,045 - INFO - Processing market BSV/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:42:29,200 - INFO - Processing market BTC/USDT: 429 Upbit records, 634 Binance records
+2024-12-03 19:42:29,357 - INFO - Processing market CELO/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:42:29,554 - INFO - Processing market CHZ/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:42:29,710 - INFO - Processing market CKB/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:42:29,925 - INFO - Processing market CVC/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:42:30,086 - INFO - Processing market DOGE/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:42:30,247 - INFO - Processing market DOT/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:42:30,403 - INFO - Processing market DRIFT/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:42:30,559 - INFO - Processing market EGLD/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:42:30,727 - INFO - Processing market ELF/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:42:30,883 - INFO - Processing market ENS/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:42:31,054 - INFO - Processing market EOS/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:42:31,710 - INFO - Processing market ETC/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:42:32,034 - INFO - Processing market ETH/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:42:32,194 - INFO - Processing market FLOW/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:42:32,355 - INFO - Processing market G/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:42:32,555 - INFO - Processing market GAS/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:42:32,720 - INFO - Processing market GLM/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:42:32,879 - INFO - Processing market GMT/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:42:33,049 - INFO - Processing market GRT/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:42:33,209 - INFO - Processing market HBAR/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:42:33,367 - INFO - Processing market HIFI/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:42:33,524 - INFO - Processing market HIVE/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:42:33,752 - INFO - Processing market ICX/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:42:33,908 - INFO - Processing market ID/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:42:34,067 - INFO - Processing market IMX/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:42:34,230 - INFO - Processing market INJ/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:42:34,390 - INFO - Processing market IOST/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:42:34,582 - INFO - Processing market IOTA/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:42:34,738 - INFO - Processing market IQ/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:42:34,893 - INFO - Processing market JST/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:42:35,047 - INFO - Processing market JUP/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:42:35,206 - INFO - Processing market KAVA/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:42:35,363 - INFO - Processing market KNC/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:42:35,573 - INFO - Processing market LINK/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:42:35,733 - INFO - Processing market LOOM/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:42:35,887 - INFO - Processing market LSK/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:42:36,041 - INFO - Processing market MANA/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:42:36,200 - INFO - Processing market MASK/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:42:36,361 - INFO - Processing market MBL/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:42:36,535 - INFO - Processing market MEW/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:42:36,691 - INFO - Processing market MINA/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:42:36,847 - INFO - Processing market MTL/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:42:37,007 - INFO - Processing market NEAR/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:42:37,169 - INFO - Processing market NEO/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:42:37,385 - INFO - Processing market ONDO/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:42:37,583 - INFO - Processing market ONG/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:42:37,750 - INFO - Processing market ONT/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:42:37,906 - INFO - Processing market ORBS/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:42:38,062 - INFO - Processing market PENDLE/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:42:38,223 - INFO - Processing market PEPE/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:42:38,383 - INFO - Processing market POL/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:42:38,542 - INFO - Processing market POLYX/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:42:38,705 - INFO - Processing market POWR/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:42:38,862 - INFO - Processing market PUNDIX/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:42:39,121 - INFO - Processing market PYTH/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:42:39,289 - INFO - Processing market QKC/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:42:39,449 - INFO - Processing market QTUM/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:42:39,612 - INFO - Processing market SAFE/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:42:39,779 - INFO - Processing market SAND/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:42:39,937 - INFO - Processing market SC/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:42:40,099 - INFO - Processing market SEI/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:42:40,260 - INFO - Processing market SHIB/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:42:40,452 - INFO - Processing market SNT/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:42:40,611 - INFO - Processing market SOL/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:42:40,773 - INFO - Processing market STEEM/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:42:40,994 - INFO - Processing market STG/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:42:41,152 - INFO - Processing market STMX/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:42:41,311 - INFO - Processing market STORJ/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:42:41,476 - INFO - Processing market STPT/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:42:41,640 - INFO - Processing market STRAX/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:42:41,803 - INFO - Processing market STX/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:42:41,967 - INFO - Processing market SUI/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:42:42,126 - INFO - Processing market SXP/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:42:42,382 - INFO - Processing market T/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:42:42,543 - INFO - Processing market TFUEL/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:42:42,708 - INFO - Processing market THETA/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:42:42,872 - INFO - Processing market TON/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:42:43,037 - INFO - Processing market TRX/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:42:43,242 - INFO - Processing market UNI/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:42:43,406 - INFO - Processing market USDC/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:42:43,565 - INFO - Processing market UXLINK/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:42:43,731 - INFO - Processing market VET/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:42:43,892 - INFO - Processing market W/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:42:44,110 - INFO - Processing market WAVES/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:42:44,279 - INFO - Processing market WAXP/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:42:44,483 - INFO - Processing market XEC/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:42:44,645 - INFO - Processing market XEM/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:42:44,809 - INFO - Processing market XLM/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:42:44,977 - INFO - Processing market XRP/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:42:45,145 - INFO - Processing market XTZ/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:42:45,314 - INFO - Processing market ZETA/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:42:45,477 - INFO - Processing market ZIL/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:42:45,639 - INFO - Processing market ZRO/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:42:45,860 - INFO - Processing market ZRX/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:42:46,072 - INFO - Successfully combined data with 26185 matched pairs
+2024-12-03 19:42:46,308 - INFO - Successfully saved 26185 rows to combined_market_data.csv
+2024-12-03 19:42:46,308 - INFO - Preparing data for web service...
+2024-12-03 19:42:47,217 - INFO - Sending 26185 records to web service...
+2024-12-03 19:42:47,470 - INFO - Data successfully sent to web service: 2024-12-03 19:42:47.470664
+2024-12-03 19:44:55,418 - DEBUG - Using selector: KqueueSelector
+2024-12-03 19:44:55,419 - INFO - Loading data from /Users/user/Desktop/upbit vs binance/upbit_data.csv
+2024-12-03 19:44:55,476 - INFO - Loaded Upbit data: 63145 rows
+2024-12-03 19:44:55,476 - INFO - Loading data from /Users/user/Desktop/upbit vs binance/binance_historical_data.csv
+2024-12-03 19:44:55,521 - INFO - Loaded Binance data: 66734 rows
+2024-12-03 19:44:55,521 - INFO - 
+Validating upbit data:
+2024-12-03 19:44:55,521 - INFO - Input DataFrame shape: (63145, 10)
+2024-12-03 19:44:55,522 - INFO - Available columns: ['market', 'source', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'trade_price', 'candle_acc_trade_volume', 'candle_acc_trade_price', 'timestamp']
+2024-12-03 19:44:55,522 - INFO - Required columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'trade_price', 'candle_acc_trade_volume']
+2024-12-03 19:44:55,522 - INFO - Normalized columns: ['market', 'source', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'trade_price', 'candle_acc_trade_volume', 'candle_acc_trade_price', 'timestamp']
+2024-12-03 19:44:55,543 - INFO - 
+Validating binance data:
+2024-12-03 19:44:55,543 - INFO - Input DataFrame shape: (66734, 9)
+2024-12-03 19:44:55,543 - INFO - Available columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'close_price', 'volume', 'quote_volume', 'market_type']
+2024-12-03 19:44:55,543 - INFO - Required columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'close_price', 'volume']
+2024-12-03 19:44:55,543 - INFO - Normalized columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'close_price', 'volume', 'quote_volume', 'market_type']
+2024-12-03 19:44:55,585 - INFO - Processing market 1INCH/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:44:55,757 - INFO - Processing market AAVE/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:44:55,921 - INFO - Processing market ADA/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:44:56,085 - INFO - Processing market AERGO/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:44:56,249 - INFO - Processing market AGLD/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:44:56,468 - INFO - Processing market AKT/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:44:56,632 - INFO - Processing market ALGO/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:44:56,827 - INFO - Processing market ANKR/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:44:56,988 - INFO - Processing market APT/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:44:57,147 - INFO - Processing market ARB/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:44:57,311 - INFO - Processing market ARDR/USDT: 430 Upbit records, 317 Binance records
+2024-12-03 19:44:57,472 - INFO - Processing market ARK/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:44:57,634 - INFO - Processing market ASTR/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:44:57,798 - INFO - Processing market ATOM/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:44:57,960 - INFO - Processing market AUCTION/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:44:58,119 - INFO - Processing market AVAX/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:44:58,339 - INFO - Processing market AXS/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:44:58,499 - INFO - Processing market BAT/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:44:58,659 - INFO - Processing market BCH/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:44:58,825 - INFO - Processing market BIGTIME/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:44:59,023 - INFO - Processing market BLUR/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:44:59,185 - INFO - Processing market BONK/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:44:59,346 - INFO - Processing market BSV/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:44:59,506 - INFO - Processing market BTC/USDT: 429 Upbit records, 634 Binance records
+2024-12-03 19:44:59,728 - INFO - Processing market CELO/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:44:59,897 - INFO - Processing market CHZ/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:45:00,060 - INFO - Processing market CKB/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:45:00,223 - INFO - Processing market CVC/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:45:00,383 - INFO - Processing market DOGE/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:45:00,544 - INFO - Processing market DOT/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:45:00,705 - INFO - Processing market DRIFT/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:45:00,869 - INFO - Processing market EGLD/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:45:01,073 - INFO - Processing market ELF/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:45:01,237 - INFO - Processing market ENS/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:45:01,456 - INFO - Processing market EOS/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:45:01,618 - INFO - Processing market ETC/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:45:01,779 - INFO - Processing market ETH/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:45:01,942 - INFO - Processing market FLOW/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:45:02,103 - INFO - Processing market G/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:45:02,273 - INFO - Processing market GAS/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:45:02,435 - INFO - Processing market GLM/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:45:02,595 - INFO - Processing market GMT/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:45:02,792 - INFO - Processing market GRT/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:45:02,953 - INFO - Processing market HBAR/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:45:03,113 - INFO - Processing market HIFI/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:45:03,326 - INFO - Processing market HIVE/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:45:03,503 - INFO - Processing market ICX/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:45:03,664 - INFO - Processing market ID/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:45:03,824 - INFO - Processing market IMX/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:45:03,985 - INFO - Processing market INJ/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:45:04,146 - INFO - Processing market IOST/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:45:04,317 - INFO - Processing market IOTA/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:45:04,486 - INFO - Processing market IQ/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:45:04,684 - INFO - Processing market JST/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:45:04,915 - INFO - Processing market JUP/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:45:05,076 - INFO - Processing market KAVA/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:45:05,239 - INFO - Processing market KNC/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:45:05,397 - INFO - Processing market LINK/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:45:05,562 - INFO - Processing market LOOM/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:45:05,730 - INFO - Processing market LSK/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:45:05,890 - INFO - Processing market MANA/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:45:06,051 - INFO - Processing market MASK/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:45:06,212 - INFO - Processing market MBL/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:45:06,445 - INFO - Processing market MEW/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:45:06,607 - INFO - Processing market MINA/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:45:06,811 - INFO - Processing market MTL/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:45:06,976 - INFO - Processing market NEAR/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:45:07,148 - INFO - Processing market NEO/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:45:07,312 - INFO - Processing market ONDO/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:45:07,472 - INFO - Processing market ONG/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:45:07,633 - INFO - Processing market ONT/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:45:07,796 - INFO - Processing market ORBS/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:45:08,026 - INFO - Processing market PENDLE/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:45:08,188 - INFO - Processing market PEPE/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:45:08,348 - INFO - Processing market POL/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:45:08,544 - INFO - Processing market POLYX/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:45:08,705 - INFO - Processing market POWR/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:45:08,867 - INFO - Processing market PUNDIX/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:45:09,034 - INFO - Processing market PYTH/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:45:09,200 - INFO - Processing market QKC/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:45:09,363 - INFO - Processing market QTUM/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:45:09,524 - INFO - Processing market SAFE/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:45:09,689 - INFO - Processing market SAND/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:45:09,955 - INFO - Processing market SC/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:45:10,182 - INFO - Processing market SEI/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:45:10,345 - INFO - Processing market SHIB/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:45:10,507 - INFO - Processing market SNT/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:45:10,669 - INFO - Processing market SOL/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:45:10,829 - INFO - Processing market STEEM/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:45:10,992 - INFO - Processing market STG/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:45:11,153 - INFO - Processing market STMX/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:45:11,324 - INFO - Processing market STORJ/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:45:11,487 - INFO - Processing market STPT/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:45:11,705 - INFO - Processing market STRAX/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:45:11,866 - INFO - Processing market STX/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:45:12,028 - INFO - Processing market SUI/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:45:12,187 - INFO - Processing market SXP/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:45:12,349 - INFO - Processing market T/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:45:12,552 - INFO - Processing market TFUEL/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:45:12,717 - INFO - Processing market THETA/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:45:12,879 - INFO - Processing market TON/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:45:13,042 - INFO - Processing market TRX/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:45:13,207 - INFO - Processing market UNI/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:45:13,367 - INFO - Processing market USDC/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:45:13,591 - INFO - Processing market UXLINK/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:45:13,753 - INFO - Processing market VET/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:45:13,915 - INFO - Processing market W/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:45:14,076 - INFO - Processing market WAVES/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:45:14,240 - INFO - Processing market WAXP/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:45:14,404 - INFO - Processing market XEC/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:45:14,596 - INFO - Processing market XEM/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:45:14,769 - INFO - Processing market XLM/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:45:14,936 - INFO - Processing market XRP/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:45:15,098 - INFO - Processing market XTZ/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:45:15,260 - INFO - Processing market ZETA/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:45:15,482 - INFO - Processing market ZIL/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:45:15,646 - INFO - Processing market ZRO/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:45:15,814 - INFO - Processing market ZRX/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:45:16,032 - INFO - Successfully combined data with 26185 matched pairs
+2024-12-03 19:45:16,266 - INFO - Successfully saved 26185 rows to combined_market_data.csv
+2024-12-03 19:45:16,266 - INFO - Preparing data for web service...
+2024-12-03 19:45:17,157 - INFO - Sending 26185 records to web service...
+2024-12-03 19:45:17,460 - INFO - Data successfully sent to web service: 2024-12-03 19:45:17.460761
+2024-12-03 19:46:31,733 - DEBUG - Using selector: KqueueSelector
+2024-12-03 19:46:31,735 - INFO - Loading data from /Users/user/Desktop/upbit vs binance/upbit_data.csv
+2024-12-03 19:46:31,810 - INFO - Loaded Upbit data: 63145 rows
+2024-12-03 19:46:31,810 - INFO - Loading data from /Users/user/Desktop/upbit vs binance/binance_historical_data.csv
+2024-12-03 19:46:31,848 - INFO - Loaded Binance data: 66734 rows
+2024-12-03 19:46:31,848 - INFO - 
+Validating upbit data:
+2024-12-03 19:46:31,848 - INFO - Input DataFrame shape: (63145, 10)
+2024-12-03 19:46:31,848 - INFO - Available columns: ['market', 'source', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'trade_price', 'candle_acc_trade_volume', 'candle_acc_trade_price', 'timestamp']
+2024-12-03 19:46:31,848 - INFO - Required columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'trade_price', 'candle_acc_trade_volume']
+2024-12-03 19:46:31,849 - INFO - Normalized columns: ['market', 'source', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'trade_price', 'candle_acc_trade_volume', 'candle_acc_trade_price', 'timestamp']
+2024-12-03 19:46:31,876 - INFO - 
+Validating binance data:
+2024-12-03 19:46:31,876 - INFO - Input DataFrame shape: (66734, 9)
+2024-12-03 19:46:31,876 - INFO - Available columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'close_price', 'volume', 'quote_volume', 'market_type']
+2024-12-03 19:46:31,876 - INFO - Required columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'close_price', 'volume']
+2024-12-03 19:46:31,876 - INFO - Normalized columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'close_price', 'volume', 'quote_volume', 'market_type']
+2024-12-03 19:46:31,948 - INFO - Processing market 1INCH/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:46:32,118 - INFO - Processing market AAVE/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:46:32,289 - INFO - Processing market ADA/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:46:32,458 - INFO - Processing market AERGO/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:46:32,619 - INFO - Processing market AGLD/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:46:32,782 - INFO - Processing market AKT/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:46:32,945 - INFO - Processing market ALGO/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:46:33,105 - INFO - Processing market ANKR/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:46:33,327 - INFO - Processing market APT/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:46:33,497 - INFO - Processing market ARB/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:46:33,712 - INFO - Processing market ARDR/USDT: 430 Upbit records, 317 Binance records
+2024-12-03 19:46:33,877 - INFO - Processing market ARK/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:46:34,040 - INFO - Processing market ASTR/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:46:34,201 - INFO - Processing market ATOM/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:46:34,363 - INFO - Processing market AUCTION/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:46:34,595 - INFO - Processing market AVAX/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:46:34,824 - INFO - Processing market AXS/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:46:34,989 - INFO - Processing market BAT/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:46:35,150 - INFO - Processing market BCH/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:46:35,368 - INFO - Processing market BIGTIME/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:46:35,532 - INFO - Processing market BLUR/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:46:35,699 - INFO - Processing market BONK/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:46:35,862 - INFO - Processing market BSV/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:46:36,055 - INFO - Processing market BTC/USDT: 429 Upbit records, 634 Binance records
+2024-12-03 19:46:36,218 - INFO - Processing market CELO/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:46:36,378 - INFO - Processing market CHZ/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:46:36,541 - INFO - Processing market CKB/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:46:36,764 - INFO - Processing market CVC/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:46:36,934 - INFO - Processing market DOGE/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:46:37,093 - INFO - Processing market DOT/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:46:37,255 - INFO - Processing market DRIFT/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:46:37,414 - INFO - Processing market EGLD/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:46:37,577 - INFO - Processing market ELF/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:46:37,776 - INFO - Processing market ENS/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:46:37,944 - INFO - Processing market EOS/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:46:38,108 - INFO - Processing market ETC/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:46:38,271 - INFO - Processing market ETH/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:46:38,500 - INFO - Processing market FLOW/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:46:38,668 - INFO - Processing market G/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:46:38,831 - INFO - Processing market GAS/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:46:38,994 - INFO - Processing market GLM/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:46:39,164 - INFO - Processing market GMT/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:46:39,326 - INFO - Processing market GRT/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:46:39,524 - INFO - Processing market HBAR/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:46:39,690 - INFO - Processing market HIFI/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:46:39,851 - INFO - Processing market HIVE/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:46:40,014 - INFO - Processing market ICX/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:46:40,179 - INFO - Processing market ID/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:46:40,402 - INFO - Processing market IMX/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:46:40,564 - INFO - Processing market INJ/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:46:40,768 - INFO - Processing market IOST/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:46:40,933 - INFO - Processing market IOTA/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:46:41,096 - INFO - Processing market IQ/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:46:41,261 - INFO - Processing market JST/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:46:41,429 - INFO - Processing market JUP/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:46:41,594 - INFO - Processing market KAVA/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:46:41,792 - INFO - Processing market KNC/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:46:41,956 - INFO - Processing market LINK/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:46:42,117 - INFO - Processing market LOOM/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:46:42,336 - INFO - Processing market LSK/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:46:42,508 - INFO - Processing market MANA/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:46:42,672 - INFO - Processing market MASK/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:46:42,834 - INFO - Processing market MBL/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:46:43,040 - INFO - Processing market MEW/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:46:43,201 - INFO - Processing market MINA/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:46:43,361 - INFO - Processing market MTL/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:46:43,563 - INFO - Processing market NEAR/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:46:43,777 - INFO - Processing market NEO/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:46:43,953 - INFO - Processing market ONDO/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:46:44,114 - INFO - Processing market ONG/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:46:44,278 - INFO - Processing market ONT/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:46:44,442 - INFO - Processing market ORBS/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:46:44,603 - INFO - Processing market PENDLE/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:46:44,776 - INFO - Processing market PEPE/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:46:44,939 - INFO - Processing market POL/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:46:45,103 - INFO - Processing market POLYX/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:46:45,264 - INFO - Processing market POWR/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:46:45,461 - INFO - Processing market PUNDIX/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:46:45,623 - INFO - Processing market PYTH/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:46:45,852 - INFO - Processing market QKC/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:46:46,017 - INFO - Processing market QTUM/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:46:46,181 - INFO - Processing market SAFE/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:46:46,343 - INFO - Processing market SAND/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:46:46,508 - INFO - Processing market SC/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:46:46,676 - INFO - Processing market SEI/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:46:46,838 - INFO - Processing market SHIB/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:46:47,044 - INFO - Processing market SNT/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:46:47,209 - INFO - Processing market SOL/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:46:47,371 - INFO - Processing market STEEM/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:46:47,535 - INFO - Processing market STG/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:46:47,790 - INFO - Processing market STMX/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:46:47,955 - INFO - Processing market STORJ/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:46:48,120 - INFO - Processing market STPT/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:46:48,286 - INFO - Processing market STRAX/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:46:48,448 - INFO - Processing market STX/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:46:48,610 - INFO - Processing market SUI/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:46:48,774 - INFO - Processing market SXP/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:46:48,938 - INFO - Processing market T/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:46:49,100 - INFO - Processing market TFUEL/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:46:49,302 - INFO - Processing market THETA/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:46:49,527 - INFO - Processing market TON/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:46:49,693 - INFO - Processing market TRX/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:46:49,855 - INFO - Processing market UNI/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:46:50,019 - INFO - Processing market USDC/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:46:50,182 - INFO - Processing market UXLINK/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:46:50,345 - INFO - Processing market VET/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:46:50,514 - INFO - Processing market W/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:46:50,681 - INFO - Processing market WAVES/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:46:50,844 - INFO - Processing market WAXP/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:46:51,044 - INFO - Processing market XEC/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:46:51,265 - INFO - Processing market XEM/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:46:51,429 - INFO - Processing market XLM/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:46:51,600 - INFO - Processing market XRP/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:46:51,764 - INFO - Processing market XTZ/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:46:51,928 - INFO - Processing market ZETA/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:46:52,090 - INFO - Processing market ZIL/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:46:52,252 - INFO - Processing market ZRO/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:46:52,417 - INFO - Processing market ZRX/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:46:52,637 - INFO - Successfully combined data with 26185 matched pairs
+2024-12-03 19:46:52,948 - INFO - Successfully saved 26185 rows to combined_market_data.csv
+2024-12-03 19:46:52,948 - INFO - Preparing data for web service...
+2024-12-03 19:46:53,807 - INFO - Sending 26185 records to web service...
+2024-12-03 19:46:54,074 - INFO - Data successfully sent to web service: 2024-12-03 19:46:54.074905
+2024-12-03 19:48:39,838 - DEBUG - Using selector: KqueueSelector
+2024-12-03 19:48:39,839 - INFO - Loading data from /Users/user/Desktop/upbit vs binance/upbit_data.csv
+2024-12-03 19:48:39,896 - INFO - Loaded Upbit data: 63145 rows
+2024-12-03 19:48:39,896 - INFO - Loading data from /Users/user/Desktop/upbit vs binance/binance_historical_data.csv
+2024-12-03 19:48:39,939 - INFO - Loaded Binance data: 66734 rows
+2024-12-03 19:48:39,939 - INFO - 
+Validating upbit data:
+2024-12-03 19:48:39,939 - INFO - Input DataFrame shape: (63145, 10)
+2024-12-03 19:48:39,939 - INFO - Available columns: ['market', 'source', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'trade_price', 'candle_acc_trade_volume', 'candle_acc_trade_price', 'timestamp']
+2024-12-03 19:48:39,939 - INFO - Required columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'trade_price', 'candle_acc_trade_volume']
+2024-12-03 19:48:39,939 - INFO - Normalized columns: ['market', 'source', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'trade_price', 'candle_acc_trade_volume', 'candle_acc_trade_price', 'timestamp']
+2024-12-03 19:48:39,962 - INFO - 
+Validating binance data:
+2024-12-03 19:48:39,962 - INFO - Input DataFrame shape: (66734, 9)
+2024-12-03 19:48:39,962 - INFO - Available columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'close_price', 'volume', 'quote_volume', 'market_type']
+2024-12-03 19:48:39,962 - INFO - Required columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'close_price', 'volume']
+2024-12-03 19:48:39,962 - INFO - Normalized columns: ['market', 'candle_date_time_utc', 'opening_price', 'high_price', 'low_price', 'close_price', 'volume', 'quote_volume', 'market_type']
+2024-12-03 19:48:40,006 - INFO - Processing market 1INCH/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:48:40,213 - INFO - Processing market AAVE/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:48:40,378 - INFO - Processing market ADA/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:48:40,544 - INFO - Processing market AERGO/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:48:40,710 - INFO - Processing market AGLD/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:48:40,870 - INFO - Processing market AKT/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:48:41,028 - INFO - Processing market ALGO/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:48:41,198 - INFO - Processing market ANKR/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:48:41,358 - INFO - Processing market APT/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:48:41,524 - INFO - Processing market ARB/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:48:41,777 - INFO - Processing market ARDR/USDT: 430 Upbit records, 317 Binance records
+2024-12-03 19:48:41,939 - INFO - Processing market ARK/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:48:42,099 - INFO - Processing market ASTR/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:48:42,264 - INFO - Processing market ATOM/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:48:42,427 - INFO - Processing market AUCTION/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:48:42,586 - INFO - Processing market AVAX/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:48:42,747 - INFO - Processing market AXS/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:48:42,932 - INFO - Processing market BAT/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:48:43,099 - INFO - Processing market BCH/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:48:43,320 - INFO - Processing market BIGTIME/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:48:43,488 - INFO - Processing market BLUR/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:48:43,648 - INFO - Processing market BONK/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:48:43,807 - INFO - Processing market BSV/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:48:43,969 - INFO - Processing market BTC/USDT: 429 Upbit records, 634 Binance records
+2024-12-03 19:48:44,128 - INFO - Processing market CELO/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:48:44,288 - INFO - Processing market CHZ/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:48:44,488 - INFO - Processing market CKB/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:48:44,722 - INFO - Processing market CVC/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:48:44,882 - INFO - Processing market DOGE/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:48:45,046 - INFO - Processing market DOT/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:48:45,206 - INFO - Processing market DRIFT/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:48:45,364 - INFO - Processing market EGLD/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:48:45,525 - INFO - Processing market ELF/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:48:45,723 - INFO - Processing market ENS/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:48:45,883 - INFO - Processing market EOS/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:48:46,045 - INFO - Processing market ETC/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:48:46,206 - INFO - Processing market ETH/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:48:46,365 - INFO - Processing market FLOW/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:48:46,527 - INFO - Processing market G/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:48:46,810 - INFO - Processing market GAS/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:48:47,009 - INFO - Processing market GLM/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:48:47,173 - INFO - Processing market GMT/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:48:47,392 - INFO - Processing market GRT/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:48:47,555 - INFO - Processing market HBAR/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:48:47,759 - INFO - Processing market HIFI/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:48:47,928 - INFO - Processing market HIVE/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:48:48,096 - INFO - Processing market ICX/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:48:48,259 - INFO - Processing market ID/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:48:48,422 - INFO - Processing market IMX/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:48:48,675 - INFO - Processing market INJ/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:48:48,847 - INFO - Processing market IOST/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:48:49,010 - INFO - Processing market IOTA/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:48:49,183 - INFO - Processing market IQ/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:48:49,346 - INFO - Processing market JST/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:48:49,511 - INFO - Processing market JUP/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:48:49,677 - INFO - Processing market KAVA/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:48:49,837 - INFO - Processing market KNC/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:48:49,999 - INFO - Processing market LINK/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:48:50,163 - INFO - Processing market LOOM/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:48:50,388 - INFO - Processing market LSK/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:48:50,551 - INFO - Processing market MANA/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:48:50,713 - INFO - Processing market MASK/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:48:50,875 - INFO - Processing market MBL/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:48:51,086 - INFO - Processing market MEW/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:48:51,249 - INFO - Processing market MINA/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:48:51,420 - INFO - Processing market MTL/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:48:51,582 - INFO - Processing market NEAR/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:48:51,780 - INFO - Processing market NEO/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:48:51,947 - INFO - Processing market ONDO/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:48:52,172 - INFO - Processing market ONG/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:48:52,336 - INFO - Processing market ONT/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:48:52,562 - INFO - Processing market ORBS/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:48:52,727 - INFO - Processing market PENDLE/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:48:52,889 - INFO - Processing market PEPE/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:48:53,052 - INFO - Processing market POL/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:48:53,215 - INFO - Processing market POLYX/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:48:53,377 - INFO - Processing market POWR/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:48:53,542 - INFO - Processing market PUNDIX/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:48:53,713 - INFO - Processing market PYTH/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:48:53,935 - INFO - Processing market QKC/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:48:54,096 - INFO - Processing market QTUM/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:48:54,261 - INFO - Processing market SAFE/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:48:54,424 - INFO - Processing market SAND/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:48:54,588 - INFO - Processing market SC/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:48:54,761 - INFO - Processing market SEI/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:48:54,924 - INFO - Processing market SHIB/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:48:55,087 - INFO - Processing market SNT/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:48:55,281 - INFO - Processing market SOL/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:48:55,506 - INFO - Processing market STEEM/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:48:55,671 - INFO - Processing market STG/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:48:55,835 - INFO - Processing market STMX/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:48:56,006 - INFO - Processing market STORJ/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:48:56,168 - INFO - Processing market STPT/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:48:56,330 - INFO - Processing market STRAX/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:48:56,494 - INFO - Processing market STX/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:48:56,655 - INFO - Processing market SUI/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:48:56,816 - INFO - Processing market SXP/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:48:56,983 - INFO - Processing market T/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:48:57,184 - INFO - Processing market TFUEL/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:48:57,407 - INFO - Processing market THETA/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:48:57,569 - INFO - Processing market TON/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:48:57,734 - INFO - Processing market TRX/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:48:57,896 - INFO - Processing market UNI/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:48:58,057 - INFO - Processing market USDC/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:48:58,227 - INFO - Processing market UXLINK/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:48:58,388 - INFO - Processing market VET/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:48:58,553 - INFO - Processing market W/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:48:58,716 - INFO - Processing market WAVES/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:48:58,876 - INFO - Processing market WAXP/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:48:59,071 - INFO - Processing market XEC/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:48:59,296 - INFO - Processing market XEM/USDT: 430 Upbit records, 318 Binance records
+2024-12-03 19:48:59,459 - INFO - Processing market XLM/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:48:59,622 - INFO - Processing market XRP/USDT: 430 Upbit records, 634 Binance records
+2024-12-03 19:48:59,787 - INFO - Processing market XTZ/USDT: 430 Upbit records, 636 Binance records
+2024-12-03 19:48:59,947 - INFO - Processing market ZETA/USDT: 429 Upbit records, 318 Binance records
+2024-12-03 19:49:00,109 - INFO - Processing market ZIL/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:49:00,272 - INFO - Processing market ZRO/USDT: 429 Upbit records, 636 Binance records
+2024-12-03 19:49:00,442 - INFO - Processing market ZRX/USDT: 430 Upbit records, 635 Binance records
+2024-12-03 19:49:00,659 - INFO - Successfully combined data with 26185 matched pairs
+2024-12-03 19:49:00,896 - INFO - Successfully saved 26185 rows to combined_market_data.csv
+2024-12-03 19:49:00,896 - INFO - Preparing data for web service...
+2024-12-03 19:49:01,798 - INFO - Sending 26185 records to web service...
+2024-12-03 19:49:02,068 - INFO - Data successfully sent to web service: 2024-12-03 19:49:02.068878
+2024-12-03 20:10:34,034 - ERROR - Main execution error: name 'combined_data' is not defined
+Traceback (most recent call last):
+  File "/Users/user/Desktop/upbit vs binance/data_combiner.py", line 98, in main
+    combined_data = combiner.combine_data(upbit_file, binance_file)
+  File "/Users/user/Desktop/upbit vs binance/data_combiner.py", line 81, in combine_data
+    self.processed_data = combined_data  # предполагается, что объединение прошло успешно
+NameError: name 'combined_data' is not defined
+2024-12-03 20:12:43,154 - INFO - Combining data...
+2024-12-03 20:12:43,259 - INFO - Validating upbit data
+2024-12-03 20:12:43,262 - INFO - Validating binance data
+2024-12-03 20:13:03,917 - INFO - Combined 26185 rows of data
+2024-12-03 20:13:04,168 - INFO - Data saved to combined_market_data.csv
